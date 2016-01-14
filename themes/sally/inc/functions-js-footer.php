@@ -1,5 +1,4 @@
 <?php
-
 /**
 * Here we add all the javascript that needs to be run on the footer.
 **/
@@ -10,6 +9,18 @@ function footer_scripts(){
 		<script type="text/javascript">
 			$( document ).ready(function() {
 				imgToSvg();
+
+				<?php if( is_page( 'grabando' ) ): ?>
+					CameraTag.observe('myVideo', 'initialized', function () {
+						document.getElementById('grabar').click();
+					});
+
+					CameraTag.observe('myVideo', 'published', function(){
+						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
+						var uuid = document.getElementById("myVideo_video_uuid").value;
+						window.location.href = site_url + '/exito';
+					});
+				<?php endif ?>
 			});
 		</script>
 <?php

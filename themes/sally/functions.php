@@ -38,9 +38,15 @@ require_once('inc/functions-js-footer.php');
 add_action( 'wp_enqueue_scripts', function(){
 
 	// scripts
-	wp_enqueue_script( 'plugins', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array('jquery'), '2.0.3', true );
+	//wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
+	wp_enqueue_script( 'plugins', JSPATH.'functions.js', array('jquery'), '2.0.3', true );
 	wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
-	wp_enqueue_script( 'bootstrap_js', 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('plugins'), '3.1.0', true );
+	wp_enqueue_script( 'bootstrap_js', 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array(), '3.1.0', true );
+
+	if( is_page( 'grabando' ) ){
+		wp_enqueue_script( 'cameratag', 'http://cameratag.com/api/v6/js/cameratag.js', array('functions'), '1.0', true );
+		wp_enqueue_script( 'strings', JSPATH.'strings.js', array('cameratag'), '1.0', true );
+	}
 
 	// localize scripts
 	wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
