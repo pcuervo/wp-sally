@@ -92,7 +92,6 @@ function save_tutorial( $nombre, $titulo, $id_categoria_tutorial, $url_video ){
 
 
 
-
 /*------------------------------------*\
 	#HELPER FUNCTIONS
 \*------------------------------------*/
@@ -126,6 +125,36 @@ show_admin_bar(false);
 /*------------------------------------*\
 	#SET/GET FUNCTIONS
 \*------------------------------------*/
+
+/**
+ * Obtiene las categorías para los tutoriales. 
+ * @return array $categories 
+*/
+function get_categorias_tutoriales(){
+	$terms = get_terms( 'categoria-tutorial' );
+	$categories = array();
+	foreach ( $terms as $term) {
+		$categories[$term->slug] = $term->name;
+	}
+	return $categories;
+}// get_categorias_tutoriales
+
+/**
+ * Obtiene las categoría (nombre o slug) para un tutorial.
+ * @param int $post_id 
+ * @param boolean $name 
+ * @return string $category
+*/
+function get_categoria_tutorial( $post_id, $name ){
+	$category_terms = get_the_terms( $post_id, 'categoria-tutorial' );
+	if( empty( $category_terms ) ){
+		return '';
+	}
+	if( $name ) {
+		return $category_terms[0]->name;
+	}
+	return $category_terms[0]->slug;
+}// get_categoria_tutorial
 
 
 
