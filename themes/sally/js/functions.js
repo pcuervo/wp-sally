@@ -1,4 +1,8 @@
 var $ = jQuery.noConflict();
+
+/*------------------------------------*\
+    #GENERAL FUNCTIONS
+\*------------------------------------*/
 function imgToSvg(){
     $('img.svg').each(function(){
         var $img = $(this);
@@ -30,6 +34,13 @@ function imgToSvg(){
     });
 } //imgToSvg
 
+function playPause( video ) {
+    if (video.paused){
+        video.play();
+        return;
+    }
+    video.pause();
+}// playPause
 
 /*------------------------------------*\
     #TOGGLE FUNCTIONS

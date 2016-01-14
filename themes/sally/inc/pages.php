@@ -19,6 +19,18 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
+	// TUTORIALES
+	if( ! get_page_by_path('ver-tutoriales') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Ver Tutoriales',
+			'post_name'   => 'ver-tutoriales',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
 	// COMENCEMOS
 	if( ! get_page_by_path('comencemos') ){
 		$page = array(

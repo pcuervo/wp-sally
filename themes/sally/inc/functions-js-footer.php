@@ -21,6 +21,10 @@ function footer_scripts(){
 						window.location.href = site_url + '/exito';
 					});
 				<?php endif ?>
+
+				<?php if ( is_page( 'ver-tutoriales' ) ) : ?>
+					var myVideo = document.getElementById("videoTutorial");
+				<?php endif; ?>
 			});
 		</script>
 <?php

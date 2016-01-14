@@ -9,7 +9,7 @@
 			<div>
 				<a href="<?php echo site_url( 'pasos-explicativos' ) ?>" class="[ btn btn-secondary btn-movil no-border ][ margin-sides   ]"><strong>Graba tutorial</strong></a>
 				<div class="[ margin-bottom ][ visible-xs ]"></div>
-				<a href="tutoriales.html" class="[ btn btn-secondary btn-movil no-border ][ margin-sides ]"><strong>Tutoriales</strong></a>
+				<a href="<?php echo site_url( 'ver-tutoriales' ) ?>" class="[ btn btn-secondary btn-movil no-border ][ margin-sides ]"><strong>Tutoriales</strong></a>
 			</div>
 		</div>
 	</section>

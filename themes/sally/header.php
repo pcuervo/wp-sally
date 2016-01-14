@@ -49,13 +49,14 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<?php  ?>
-	<body <?php if ( ! is_home() ) echo 'class="bg-primary"';// body_class();  ?>>
+	<body <?php if ( ! is_home() && ! is_page( 'ver-tutoriales' ) ) echo 'class="bg-primary"'; body_class();  ?>>
 
 		<?php if ( is_home() ): ?>
 			<div class="[ bg-home bg-image ]">
 				<div class="[ bg-opacity-light bg-image height-100 ] ">
-					<?php get_template_part( 'templates/header', 'home' ); ?>
+					<?php get_template_part( 'templates/header', 'primary' ); ?>
+		<?php elseif ( is_page( 'ver-tutoriales' ) ): ?>
+			<?php get_template_part( 'templates/header', 'primary' ); ?>
 		<?php else: ?>
-			<?php get_template_part( 'templates/header', 'regular' ); ?>
+			<?php get_template_part( 'templates/header', 'light' ); ?>
 		<?php endif; ?>
