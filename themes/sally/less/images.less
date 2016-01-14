@@ -1,0 +1,78 @@
+//
+// Images
+// --------------------------------------------------
+
+.logo{
+  width: 160px;
+  @media (min-width: @screen-sm){ width: 200px;}
+}
+
+
+.img-title{
+  margin: 0 auto;
+}
+
+header span img:not(.nav img){
+	margin-left:@margin-base;
+}
+
+//Background images
+.bg-image{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.bg-home{
+	background-image: url('img/home.jpg');
+	height: 100vh;
+	@media (max-width: @screen-xs){
+		background-size: 450%;
+		background-position: 30% 70%;
+	}
+}
+.bg-opacity-light{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-opacity{
+	 opacity:0.5;
+}
+
+.bg-opacity-dark{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ico-small{
+	width: 35px;
+}
+
+.icon-box{ width: 35px; height: 60px; }
+
+.return{
+	& a{
+		color: @primary;
+		.bg-primary &{color: @light;}
+	}
+	& img{ width: 30px; }
+}
+
+.hover-hide{
+	opacity: 1;
+	&:hover,
+	&:focus,
+	&.focus{
+		opacity: 0;
+		.transition
+	}
+}
+
+.hover-show{
+
+  	&:hover,
+	&:focus,
+	&.focus{
+    	opacity: 1;
+    	.show;
+  }
+}
