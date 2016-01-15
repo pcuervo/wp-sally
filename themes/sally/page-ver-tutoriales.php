@@ -8,23 +8,18 @@
 			<p><strong>Todos tenemos algo que compartir.</strong></p>
 			<p>Conoce los tips de belleza que las mujeres de México están compartiendo con nosotros</p>
 		</div>
-		<div class="[ col-xs-12 col-sm-4 col-sm-offset-0 col-md-3 col-md-offset-1 ][ text-center--movil ]">
-			<a href="http://www.sallymexico.com/" class="[ btn btn-secondary width-auto ][ margin-bottom ]"><strong>ir a tienda en linea</strong></a>
-		</div>
 	</div>
 
 	<!--/filtros / paginacion-->
 	<div class="[ row ]">
 		<div class="[ col-xs-3 col-sm-1  ]">
-			<p class="[ margin-right ][ text-uppercase ]">
-				<strong><a class="[ color-primary ][ collapsed ]" role="button" data-toggle="collapse" data-parent="#accordion" href="#verfiltros" aria-expanded="false" aria-controls="verfiltros">Filtros</a></strong>
-			</p>
+			<p class="[ margin-right ][ text-uppercase ]"><strong>Filtros</strong></p>
 		</div>
 		<div class="[ col-xs-9 col-sm-6 ][ center-block ]" >
-			<p id="verfiltros" class="[ panel-collapse collapse ]" role="tabpanel">
+			<p id="verfiltros">
 				<?php $categorias_tutoriales = get_categorias_tutoriales(); ?>
 				<?php foreach ( $categorias_tutoriales as $slug => $name ) : ?>
-					<a class="[ color-primary ][ margin-right--xsmall ][ <?php echo $slug; ?> ]" href=""><?php echo $name; ?></a>
+					<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ][ <?php echo $slug; ?> ]" href=""><?php echo $name; ?></a>
 				<?php endforeach; ?>
 			</p>
 		</div>
