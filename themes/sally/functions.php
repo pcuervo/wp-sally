@@ -70,9 +70,10 @@ add_action( 'wp_footer', 'footer_scripts', 21 );
  * @param string $titulo - Título del tutorial
  * @param int $id_categoria - ID de taxonomy term de categoría
  * @param string $url_video - URL de video del tutorial
+ * @param string $url_imagen - URL relative de thumb del video
  * @return integer $post_id - ID del post creado.
  */
-function save_tutorial( $nombre, $titulo, $id_categoria_tutorial, $url_video ){
+function save_tutorial( $nombre, $titulo, $id_categoria_tutorial, $url_video, $url_imagen ){
 	// Create post object
 	$tutorial_post = array(
 		'post_title'    => $titulo,
@@ -86,6 +87,7 @@ function save_tutorial( $nombre, $titulo, $id_categoria_tutorial, $url_video ){
 
 	add_post_meta( $post_id, '_nombre_meta', $nombre );
 	add_post_meta( $post_id, '_url_video_meta', $url_video );
+	add_post_meta( $post_id, THEMEPATH . '_url_imagen_meta', $url_imagen );
 	$id = wp_set_object_terms( $post_id, array( $id_categoria_tutorial ), 'categoria-tutorial' );
 	return $post_id;
 }// save_tutorial

@@ -1,4 +1,4 @@
-<div class="[ bg-opacity-light bg-image height-100 ] ">
+
 	<header class="[ container ]">
 		<a href="<?php echo site_url(); ?>">
 			<img class="[ logo ]" src="<?php echo THEMEPATH; ?>img/logo1.png">

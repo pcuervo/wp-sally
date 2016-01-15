@@ -55,6 +55,7 @@
 			<div class="[ bg-home bg-image ]">
 				<div class="[ bg-opacity-light bg-image height-100 ] ">
 					<?php get_template_part( 'templates/header', 'primary' ); ?>
+				</div>
 		<?php elseif ( is_page( 'ver-tutoriales' ) ): ?>
 			<?php get_template_part( 'templates/header', 'primary' ); ?>
 		<?php else: ?>
