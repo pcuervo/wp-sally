@@ -24,11 +24,11 @@
 				</div>
 				<p class="[ text-uppercase ][ no-margin ]"><strong>Al final</strong></p>
 				<p class="[ no-margin ]">Sube tu video.</p>
-				<p>!Ya estás contagiando tu belleza!</p>
+				<p>!Ya estás compartiendo tu belleza!</p>
 			</div>
 		</div>
 	</div>
-	<a href="<?php echo site_url( 'comencemos' ); ?>" class="[ btn btn-primary ]">Empezar a grabar</a>
+	<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary ]">Empezar a grabar</a>
 	<div class="[ margin-bottom--xlarge ][ visible-xs ]"></div>
 </section>
 <?php get_footer(); ?>

@@ -12,6 +12,7 @@
 		<a href="https://www.instagram.com/sallybeautymx/"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/instagram.svg"></a>
 		<a href="https://twitter.com/SallyMexico"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg"></a>
 		<a href="https://www.facebook.com/SallyMexico"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg"></a>
+		<a href="http://www.sallymexico.com/" target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/shopping-bag-1.svg"></a>
 	</span>
 	<div class="[ return ]">
 		<a href="<?php echo site_url(); ?>">
@@ -33,6 +34,8 @@
 					<a href="https://www.instagram.com/sallybeautymx/"  target="_blank"><img class="[ svg icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/instagram.svg"></a>
 					<a href="https://twitter.com/SallyMexico"  target="_blank"><img class="[ svg icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg"></a>
 					<a href="https://www.facebook.com/SallyMexico"  target="_blank"><img class="[ svg icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg"></a>
+					<a href="http://www.sallymexico.com/"  target="_blank"><img class="[ svg icon icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/shopping-bag-1.svg"></a>
+
 				</div>
 			</div>
 		</div>
