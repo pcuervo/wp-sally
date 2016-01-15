@@ -42,9 +42,9 @@ function playPause( video ) {
     video.pause();
 }// playPause
 
-/*------------------------------------*\
-    #TOGGLE FUNCTIONS
-\*------------------------------------*/
+function addSourceToVideo(element, src, type) {
+    element.html('<source src="'+src+'" type="'+type+'"></source>');
+}
 
 function loadVideo(){
     $('.js-video-container').load( "ajax/video.html .js-video-element" );

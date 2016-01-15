@@ -13,5 +13,5 @@
 			</div>
 		</div>
 	</section>
-</div><!-- bg-opacity-light bg-image height-100 -->
+</div><!-- bg-image height-100 -->
 <?php get_footer(); ?>
