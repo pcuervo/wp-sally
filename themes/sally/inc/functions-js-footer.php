@@ -59,7 +59,7 @@ function footer_scripts(){
 							console.log(data);
 							$("#loading").hide();
 							localStorage.setItem("video_url" , 'render/videos/' + data.video_url);
-							localStorage.setItem("img_url", 'render/img' + data.img_url);
+							localStorage.setItem("img_url", 'render/img/' + data.img_url);
 							localStorage.setItem("title", $("#title_field").val());
 							localStorage.setItem("name", $("#name_field").val())
 							localStorage.setItem("category", $("#frase1_category").val());
