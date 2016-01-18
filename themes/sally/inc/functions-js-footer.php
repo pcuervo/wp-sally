@@ -75,6 +75,13 @@ function footer_scripts(){
 
 					});
 				<?php endif; ?>
+
+				<?php if( is_page( 'vobo' ) ) : ?>
+					$('.js-publicar-element').hide();
+					$('.js-publicar-opener').on('click', function(){
+						$('.js-publicar-element').show();
+					});
+				<?php endif; ?>
 			});
 		</script>
 <?php
