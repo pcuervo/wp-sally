@@ -2,7 +2,7 @@
 <section class="[ container ]">
 	<div class="[ margin-top--xlarge ][ hidden-xs ]"></div>
 	<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
-	<div class="[ text-center ]">
+	<div class="[ text-center ][ js-video-container ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ margin-bottom ]">
 				<div style="text-center">
