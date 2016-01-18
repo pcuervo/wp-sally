@@ -80,7 +80,7 @@ function save_tutorial(){
 	$categoria_tutorial =  $_POST['category'];
 	$url_video =  $_POST['video_url'];
 	$url_imagen = $_POST['img_url'];
-	// Create post object
+
 	$tutorial_post = array(
 		'post_title'    => $titulo,
 		'post_status'   => 'publish',
@@ -92,7 +92,7 @@ function save_tutorial(){
 	if( ! $post_id ){
 		$message = array(
 			'error'		=> 1,
-			'message'	=> 'No se pudo guardar el tutorial.',
+			'message'	=> 'Ha ocurrido un error. No se pudo guardar el tutorial.',
 		);
 		echo json_encode($message , JSON_FORCE_OBJECT);
 		exit();

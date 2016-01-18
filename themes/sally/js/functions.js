@@ -63,13 +63,15 @@ function publishVideoWP( name, title, category, video_url, img_url ){
             category:   category,
             video_url:  video_url,
             img_url:    img_url,
-            action: 'save_tutorial'
+            action:     'save_tutorial'
         },
         function( response ){
             console.log( response );
-            if( parseInt( response.error ) ) return 0;
-            
-            return 1;
+            if( parseInt( response.error ) ){
+                alert( response.message );
+                return;
+            }
+            $('.js-publicar-element').show();
         }
     );
 }// publishVideoWP

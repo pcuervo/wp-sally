@@ -73,7 +73,6 @@ function footer_scripts(){
 					$('.js-publicar-element').hide();
 					$('.js-publicar-opener').on('click', function(){
 						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
-						$('.js-publicar-element').show();
 					});
 
 					
