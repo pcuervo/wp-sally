@@ -26,6 +26,11 @@ function footer_scripts(){
 
 				<?php if ( is_page( 'ver-tutoriales' ) ) : ?>
 					var myVideo = document.getElementById("videoTutorial");
+
+					$('.grid-item__info').click( function(){
+						$('.js-modal-titulo') $(this).find('.js-titulo') );
+						$('.js-modal-nombre') $(this).find('.js-nombre') );
+					});
 				<?php endif; ?>
 
 				<?php if( is_page( 'exito' ) ) : ?>
@@ -73,9 +78,7 @@ function footer_scripts(){
 					$('.js-publicar-element').hide();
 					$('.js-publicar-opener').on('click', function(){
 						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
-					});
-
-					
+					});					
 				<?php endif; ?>
 
 				<?php if ( is_page( 'tutoriales-single' ) ) : ?>

@@ -55,8 +55,8 @@
 			<div class="[ absolute ][ text-uppercase color-light ][ width-100 ][ container-fluid ]" >
 				<div class="[ row ][ margin-top ]">
 					<div class="[ col-xs-11 ]">
-						<p class="[ no-margin ][ p--xs ]"><strong>Titulo </strong></p>
-						<p class="[ p--xs ]">Usuario</p>
+						<p class="[ no-margin ][ p--xs ][ js-modal-titulo ]"><strong></strong></p>
+						<p class="[ p--xs ][ js-modal-nombre ]">Usuario</p>
 					</div>
 					<div class="[ col-xs-1 no-padding--top-bottom no-padding--left padding--right--small ][ z-index--1 ]">
 						<button type="button" class="[ close ][ pull-right ]" data-dismiss="modal">
