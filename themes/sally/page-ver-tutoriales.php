@@ -57,8 +57,8 @@
 			<div class="[ absolute ][ text-uppercase color-light ][ width-100 ][ container-fluid ]" >
 				<div class="[ row ][ margin-top ]">
 					<div class="[ col-xs-11 ]">
-						<p class="[ no-margin ][ p--xs ]"><strong>Titulo </strong></p>
-						<p class="[ p--xs ]">Usuario</p>
+						<p class="[ no-margin ][ p--xs ]"><strong class="[ js-modal-titulo ]"></strong></p>
+						<p class="[ p--xs ][ js-modal-nombre ]"></p>
 					</div>
 					<div class="[ col-xs-1 no-padding--top-bottom no-padding--left padding--right--small ][ z-index--1 ]">
 						<button type="button" class="[ close ][ pull-right ]" data-dismiss="modal">
@@ -69,13 +69,10 @@
 			</div>
 			<!-- video -->
 			<video class=" z-index---1 " id="videoTutorial" width="100%" height="100%" >
-				<source src="movie.mp4" type="video/mp4">
-				<source src="movie.ogg" type="video/ogg">
-				 <source type="video/webm" src="video.webm" />
 				Your browser does not support the video tag.
 			</video>
 			<!-- play video -->
-			<button class="[ btn-play ]" onclick="playPause()"><img src="<?php echo THEMEPATH; ?>img/play-btn.png">
+			<button class="[ btn-play ]"><img src="<?php echo THEMEPATH; ?>img/play-btn.png">
 			</button>
 		</div>
 		<div class="relative">
