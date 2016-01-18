@@ -7,12 +7,13 @@
 	);
 	$query_tutoriales = new WP_Query( $tutoriales_args );
 	if( $query_tutoriales->have_posts() ) : while( $query_tutoriales->have_posts() ) : $query_tutoriales->the_post();
-		$image_urls = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+		$image_url = THEMEPATH . get_post_meta( $post->ID, '_url_imagen_meta', true );
+		$video_url = get_post_meta( $post->ID, '_url_video_meta', true );
 		$nombre = get_post_meta( $post->ID, '_nombre_meta', true );
 		$slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 	?>
 		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ no-padding ][ grid-item ][ <?php echo $slug_categoria_tutorial; ?> ]">
-			<div class="[ padding--square ][ bg-image ][ relative ][ grid-item__image ]" style="background-image: url('<?php echo $image_urls[0] ?>');">
+			<div class="[ padding--square ][ bg-image ][ relative ][ grid-item__image ]" style="background-image: url('<?php echo $image_url ?>');">
 				<div class="[ bg-opacity-dark ][ grid-item__info_compressed ]">
 					<div class="[ center-full ]">
 						<p class="[ text-uppercase color-primary ]"><strong><?php echo $nombre; ?></strong></p>
@@ -27,7 +28,7 @@
 						<div class="[ grid-item__info__bg ]">
 							<p class="[ text-uppercase color-black ][ no-margin ][ fz-small ][ js-nombre ]"><strong> <?php echo $nombre; ?></strong></p>
 							<p class="[ color-light ][ no-margin ][ fz-small ][ js-titulo ]"><?php echo get_the_title(); ?></p>
-							<span class="[ hidden ][ js-url-video ]"><?php echo $url_video; ?></span>
+							<span class="[ hidden ][ js-url-video ]"><?php echo $video_url; ?></span>
 						</div>
 					</div>
 				</div>

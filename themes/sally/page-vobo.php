@@ -4,7 +4,6 @@
 	<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
 	<div class="[ text-center ]">
 		<div class="[ row ]">
-
 			<div class="[ col-xs-12 ][ margin-bottom ]">
 				<div style="text-center">
 					<video id="video1" width="100%" height="100%" controls>

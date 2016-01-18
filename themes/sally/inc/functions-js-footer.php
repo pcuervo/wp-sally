@@ -59,7 +59,7 @@ function footer_scripts(){
 							console.log(data);
 							$("#loading").hide();
 							localStorage.setItem("video_url" , 'render/videos/' + data.video_url);
-							localStorage.setItem("img_url", 'render/img' + data.img_url);
+							localStorage.setItem("img_url", 'render/img/' + data.img_url);
 							localStorage.setItem("title", $("#title_field").val());
 							localStorage.setItem("name", $("#name_field").val())
 							localStorage.setItem("category", $("#frase1_category").val());
@@ -74,7 +74,6 @@ function footer_scripts(){
 
 					$('.js-publicar-opener').on('click', function(){
 						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
-						$('.js-publicar-element').show();
 					});
 
 					var video_url = '<?php echo THEMEPATH ?>' + localStorage.getItem('video_url');
