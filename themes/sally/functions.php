@@ -125,7 +125,7 @@ function show_select_categorias_tutoriales(){
 	echo '<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Categoría</label>';
 	echo '<select class="[ form-control select-categorias ][ margin-bottom ] ">';
 	foreach ( $terms as $term) {
-		echo '<option value="' . $term->id . '">' . $term->name . '</option>';
+		echo '<option value="' . $term->name . '">' . $term->name . '</option>';
 	}
 	echo '</select>';
 }// show_select_categorias_tutoriales
