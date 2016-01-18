@@ -72,8 +72,7 @@
 				Your browser does not support the video tag.
 			</video>
 			<!-- play video -->
-			<!-- <button class="[ btn-play ]"><img src="<?php echo THEMEPATH; ?>img/play-btn.png"> -->
-			</button>
+			<!-- <button class="[ btn-play ]"><img src="<?php echo THEMEPATH; ?>img/play-btn.png"> </button> -->
 		</div>
 		<div class="relative">
 			<div class="[ text-center ]">

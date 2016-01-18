@@ -12,7 +12,7 @@
 		$nombre = get_post_meta( $post->ID, '_nombre_meta', true );
 		$slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 	?>
-		<div class="[ col-xs-6 col-sm-3 col-md-4 ][ no-padding ][ grid-item ][ <?php echo $slug_categoria_tutorial; ?> ]">
+		<div class="[ col-xs-6 col-sm-3 col-md-4 ][ no-padding ][ grid-item ][ <?php echo $slug_categoria_tutorial; ?> ]" data-toggle="modal" data-target="#tutoriales3">
 			<div class="[ padding--square ][ bg-image ][ relative ][ grid-item__image ]" style="background-image: url('<?php echo $image_url ?>');">
 				<div class="[ bg-opacity-dark ][ grid-item__info_compressed ]">
 					<div class="[ center-full ]">
@@ -20,7 +20,7 @@
 						<p class="[ color-light ]"><?php echo get_the_title(); ?></p>
 					</div>
 				</div>
-				<div class="[ grid-item__info ]" data-toggle="modal" data-target="#tutoriales3">
+				<div class="[ grid-item__info ]">
 					<div class="[ relative ][ height-100 ]">
 						<button class="[ btn-play ][ center-full ]">
 							<img src="<?php echo THEMEPATH; ?>img/play-btn.png">
