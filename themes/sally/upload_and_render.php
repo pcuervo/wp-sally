@@ -101,7 +101,9 @@
 
 					$total_video_frames = exec("/usr/bin/ffprobe -i ".$video_path." -show_frames 2>&1|grep -c '^\[FRAME'");
 
-					$frame_rate_distribution = ($total_video_frames + 318) / 5;
+					$total_video_frames = ($total_video_frames / 2) - 150 ;
+
+					$frame_rate_distribution = ($total_video_frames + 320) / 5;
 
 					$frame_rate_super_1 = $frame_rate_distribution;
 
