@@ -92,7 +92,11 @@ function footer_scripts(){
 						$(this).hide();
 						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
 					});
-	
+
+					$('#tutoriales3').on('hidden.bs.modal', function (e) {
+						console.log('bye yall');
+					})
+						
 				<?php endif; ?>
 
 				<?php if ( is_page( 'tutoriales-single' ) ) : ?>
