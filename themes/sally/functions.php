@@ -124,7 +124,7 @@ function show_select_categorias_tutoriales(){
 	$args = array( 'hide_empty' => false );
 	$terms = get_terms( 'categoria-tutorial', $args );
 	echo '<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Categoría</label>';
-	echo '<select class="[ form-control select-categorias ][ margin-bottom ]" name="frase1_category" id="frase1_category">';
+	echo '<select class="[ form-control select-categorias ][ margin-bottom ]" name="frase1_category" id="frase1_category" required data-parsley-error-message="Por favor selecciona una categoría." >';
 	foreach ( $terms as $term) {
 		echo '<option value="' . $term->name . '">' . $term->name . '</option>';
 	}
