@@ -68,11 +68,11 @@
 				</div>
 			</div>
 			<!-- video -->
-			<video class=" z-index---1 " id="videoTutorial" width="100%" height="100%" >
+			<video class="z-index---1" controls id="videoTutorial" width="100%" height="100%" >
 				Your browser does not support the video tag.
 			</video>
 			<!-- play video -->
-			<button class="[ btn-play ]"><img src="<?php echo THEMEPATH; ?>img/play-btn.png">
+			<!-- <button class="[ btn-play ]"><img src="<?php echo THEMEPATH; ?>img/play-btn.png"> -->
 			</button>
 		</div>
 		<div class="relative">

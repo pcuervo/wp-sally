@@ -27,14 +27,12 @@ function footer_scripts(){
 				<?php if ( is_page( 'ver-tutoriales' ) ) : ?>
 					var myVideo = document.getElementById("videoTutorial");
 
-					$('.grid-item__info').click( function(){
+					$('.grid-item').click( function(){
 						var video_url = '<?php echo THEMEPATH ?>' + $(this).find('.js-url-video').text();
 						addSourceToVideo( $('#videoTutorial'), video_url, 'video/mp4');
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
-						$('.btn-play').click( function(){
-							playPause( $('#videoTutorial')[0] );
-						});
+						playPause( $('#videoTutorial')[0] );
 					});
 
 					runIsotope('.js-grid', '.grid-item');
