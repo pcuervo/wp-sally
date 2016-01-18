@@ -75,6 +75,10 @@ function footer_scripts(){
 
 					
 				<?php endif; ?>
+
+				<?php if ( is_page( 'tutoriales-single' ) ) : ?>
+
+				<?php endif; ?>
 			});
 		</script>
 <?php
