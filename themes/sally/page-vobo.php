@@ -4,7 +4,7 @@
 	<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
 	<div class="[ text-center ][ margin-top ]">
 		<div class="[ inline-block align-middle ]">
-			<a href="tutoriales-single.html" class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Ver video</a>
+			<a href="<?php echo site_url( 'tutoriales-single' ); ?>" class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Ver video</a>
 		</div>
 		<div class="[ clearfix ][ margin-bottom ][ visible-xs ]"></div>
 		<div class="[ inline-block align-middle ]">

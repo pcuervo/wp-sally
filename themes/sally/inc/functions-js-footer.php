@@ -11,14 +11,17 @@ function footer_scripts(){
 				imgToSvg();
 
 				<?php if( is_page( 'grabando' ) ): ?>
+
 					CameraTag.observe('myVideo', 'initialized', function () {
 						document.getElementById('grabar').click();
 					});
 					CameraTag.observe('myVideo', 'published', function(){
 						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
 						var uuid = document.getElementById("myVideo_video_uuid").value;
+						localStorage.setItem("uuid", uuid);
 						window.location.href = site_url + '/exito';
 					});
+
 				<?php endif ?>
 
 				<?php if ( is_page( 'ver-tutoriales' ) ) : ?>
@@ -26,12 +29,13 @@ function footer_scripts(){
 				<?php endif; ?>
 
 				<?php if( is_page( 'exito' ) ) : ?>
+
 					$("#loading").hide();
 
 					$("#forma-exito").submit( function(e){
 						console.log('submitting');
 						e.preventDefault();
-						var uuid = getCookie("uuid");
+						var uuid = localStorage.getItem("uuid");
 						var formData = {
 							'uuid' : uuid,
 							'name' : $("#name_field").val(),
@@ -39,7 +43,7 @@ function footer_scripts(){
 							'frase1_field' : $("#frase1_field").val(),
 							'frase2_field' : $("#frase2_field").val(),
 							'frase3_field' : $("#frase3_field").val(),
-							'category' :  $("#category").val(),
+							'frase1_category' :  $("#frase1_category").val(),
 						};
 
 						$.ajax({
@@ -54,16 +58,9 @@ function footer_scripts(){
 						})
 						.done(function(data){
 							$("#loading").hide();
-
-							document.cookie = "video_url =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-			 				document.cookie = "video_url = " + data.video_url;
-
-			 				document.cookie = "title =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-			 				document.cookie = "title =" +   $("#title_field").val();
-
-			 				document.cookie = "name =;  expires=Thu, 01 Jan 1970 00:00:00 UTC";
-			 				document.cookie = "name = " +  $("#name_field").val();
-
+							localStorage.setItem("video_url" , data.video_url);
+							localStorage.setItem("title", $("#title_field").val());
+							localStorage.setItem("name", $("#name_field").val())
 			 				window.location.href = site_url + '/vobo';
 						});
 					 	event.preventDefault();
@@ -75,6 +72,8 @@ function footer_scripts(){
 					$('.js-publicar-opener').on('click', function(){
 						$('.js-publicar-element').show();
 					});
+
+					
 				<?php endif; ?>
 			});
 		</script>

@@ -26,7 +26,7 @@
     	$frase1_field = $_POST['frase1_field'];
     	$frase2_field = $_POST['frase2_field'];
     	$frase3_field = $_POST['frase3_field'];
-    	$category = $_POST['category'];
+    	$category = $_POST['frase1_category'];
 
     	$DISTRIBUTION_ID = "2ea30d8b-0dca-406d-beb1-a91cdc797d19";
 
@@ -54,8 +54,8 @@
 			curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
 			$rawdata=curl_exec ($ch);
 			curl_close ($ch);
-
-			$fp = fopen("videos/$rename.mp4",'w');
+			$path = dirname(__DIR__);
+			$fp = fopen($path . "/sally/videos/$rename.mp4",'w');
 			fwrite($fp, $rawdata); 
 			fclose($fp);  
 			return true;           
@@ -67,11 +67,12 @@
 
 		if(getVideo($video, $random_string , $ch)){
 
+				$path = dirname(__DIR__);
 				//upload video to impossible software
 				$username = "434bee53c36633c0f27ed1ae7764c679be616b2e";
 				$password = "14555c226cf05c5dcb04ec73a95af6aba92905ec";
 
-				$file = fopen( "videos/$random_string.mp4" , 'r');
+				$file = fopen( $path. "/sally/videos/$random_string.mp4" , 'r');
 				$is_url = 'https://api.impossible.io/v1/data/' . $DISTRIBUTION_ID . '/'.$random_string.'.mp4';
 
 				$ch = curl_init();
@@ -86,7 +87,7 @@
 				curl_setopt($ch, CURLOPT_PUT, true);
 				curl_setopt($ch, CURLOPT_UPLOAD, true);
 				curl_setopt($ch, CURLOPT_INFILE, $file );
-				curl_setopt($ch, CURLOPT_INFILESIZE, filesize("videos/$random_string.mp4"));
+				curl_setopt($ch, CURLOPT_INFILESIZE, filesize($path . "/sally/videos/$random_string.mp4"));
 				$result = curl_exec($ch);
 				fclose($file);
 				$curl_error = curl_error($ch);
@@ -94,8 +95,9 @@
 				//No upload error
 				if(empty($curl_error)){	
 
+					$path = dirname(__DIR__);
 
-					$video_path = dirname(__DIR__)."/public/videos/".$random_string.".mp4";
+					$video_path = dirname(__DIR__)."/sally/videos/".$random_string.".mp4";
 
 					$total_video_frames = exec("/usr/bin/ffprobe -i ".$video_path." -show_frames 2>&1|grep -c '^\[FRAME'");
 
@@ -115,14 +117,14 @@
 
 					
 					//render with json
-					$template = file_get_contents( 'template.json' );
+					$template = file_get_contents( $path.'/sally/template.json' );
 					$search = array("__uuid__", "__name__", "__title__", "__frase1_field__", "__frase2_field__", "__frase3_field__","__framerate_super1__", "__framerate_super2__", "__framerate_super3__");
 					$replace = array($random_string, $name, $title, $frase1_field, $frase2_field, $frase3_field, $framerate_super1, $framerate_super2, $framerate_super3);
 					$template = str_replace($search, $replace , $template);
 
-					file_put_contents( "json/".$random_string.".json", $template );
+					file_put_contents( $path . "/sally/json/".$random_string.".json", $template );
 
-					$file = fopen( "json/".$random_string.".json" , "rb");
+					$file = fopen( $path. "/sally/json/".$random_string.".json" , "rb");
 					$url = 'https://api.impossible.io/v1/sdl/' . $DISTRIBUTION_ID . '/'.$random_string;
 					
 					$ch = curl_init();
@@ -137,7 +139,7 @@
 					curl_setopt($ch, CURLOPT_PUT, true);
 					curl_setopt($ch, CURLOPT_UPLOAD, true);
 					curl_setopt($ch, CURLOPT_INFILE, $file );
-					curl_setopt($ch, CURLOPT_INFILESIZE, filesize("json/$random_string.json"));
+					curl_setopt($ch, CURLOPT_INFILESIZE, filesize($path . "/sally/json/$random_string.json"));
 					
 					$result = curl_exec($ch);
 					fclose($file);
@@ -147,10 +149,10 @@
 						
 						//render ok
 						$mp4 = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".mp4";
-						file_put_contents( "render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
+						file_put_contents( $path."/sally/render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
 
-						$jpg = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".jpg?frame=1220";
-						file_put_contents( "render/img/".$random_string.'.jpg' ,  file_get_contents( $jpg  ) );
+						$jpg = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".jpg?frame=500";
+						file_put_contents( $path."/sally/render/img/".$random_string.'.jpg' ,  file_get_contents( $jpg  ) );
 
 						$data['success'] = true;
         				$data['video_url']  = $random_string.".mp4";
