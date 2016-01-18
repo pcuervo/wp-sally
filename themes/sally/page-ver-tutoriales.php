@@ -13,12 +13,14 @@
 	<!--/filtros / paginacion-->
 	<div class="[ row ]">
 		<div class="[ col-xs-3 col-sm-1  ]">
-			<p class="[ margin-right ][ text-uppercase ]"><strong>Filtros</strong></p>
+			<p class="[ margin-right ][ text-uppercase ]"><strong>Filtros </strong></p>
 		</div>
 		<div class="[ col-xs-9 col-sm-6 ][ center-block ]" >
 			<p id="verfiltros">
-				<?php $categorias_tutoriales = get_categorias_tutoriales(); ?>
-				<?php foreach ( $categorias_tutoriales as $slug => $name ) : ?>
+				<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ][  ]" href="">Todos</a>
+				<?php
+				$categorias_tutoriales = get_categorias_tutoriales();
+				foreach ( $categorias_tutoriales as $slug => $name ) : ?>
 					<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ][ <?php echo $slug; ?> ]" href=""><?php echo $name; ?></a>
 				<?php endforeach; ?>
 			</p>

@@ -8,16 +8,13 @@
 			<div class="[ col-xs-12 ][ margin-bottom ]">
 				<div style="text-center">
 					<video id="video1" width="100%" height="100%" controls>
-						<source src="movie.mp4" type="video/mp4">
-						<source src="movie.ogg" type="video/ogg">
-						 <source type="video/webm" src="video.webm" />
 						Your browser does not support the video tag.
 					</video>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="[ text-center ][ margin-top ]">
+	<div class="[ text-center ][ margin-top margin-bottom ]">
 		<div class="[ inline-block align-middle ]">
 			<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Volver a grabar</a>
 		</div>
