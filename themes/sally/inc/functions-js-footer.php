@@ -90,47 +90,6 @@ function footer_scripts(){
 						});
 					 	event.preventDefault();
 					});
-
-					// $("#forma-exito").submit( function(e){
-					// 	console.log('submitting');
-					// 	e.preventDefault();
-					// 	var uuid = getCookie("uuid");
-					// 	var formData = {
-					// 		'uuid' : uuid,
-					// 		'name' : $("#name_field").val(),
-					// 		'title': $("#title_field").val(),
-					// 		'frase1_field' : $("#frase1_field").val(),
-					// 		'frase2_field' : $("#frase2_field").val(),
-					// 		'frase3_field' : $("#frase3_field").val(),
-					// 		'category' :  $("#category").val(),
-					// 	};
-
-					// 	$.ajax({
-					// 		type: 'POST',
-					// 		url:  theme_url + '/upload_and_render.php',
-					// 		data: formData,
-					// 		dataType: 'json',
-					// 		encode : true,
-					// 		beforeSend : function(){
-					// 			$("#loading").show();
-					// 		}
-					// 	})
-					// 	.done(function(data){
-					// 		$("#loading").hide();
-
-					// 		document.cookie = "video_url =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-					// 		document.cookie = "video_url = " + data.video_url;
-
-					// 		document.cookie = "title =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-					// 		document.cookie = "title =" +   $("#title_field").val();
-
-					// 		document.cookie = "name =;  expires=Thu, 01 Jan 1970 00:00:00 UTC";
-					// 		document.cookie = "name = " +  $("#name_field").val();
-
-					// 		window.location.href = site_url + '/vobo';
-					// 	});
-					//  	event.preventDefault();
-					// });
 				<?php endif; ?>
 
 				<?php if( is_page( 'vobo' ) ) : ?>
@@ -138,6 +97,10 @@ function footer_scripts(){
 					$('.js-publicar-opener').on('click', function(){
 						$('.js-publicar-element').show();
 					});
+				<?php endif; ?>
+
+				<?php if ( is_page( 'tutoriales-single' ) ) : ?>
+
 				<?php endif; ?>
 			});
 		</script>

@@ -24,7 +24,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">1</span>
-						<input type="text"  name="frase1" id="frase1_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 25 caractéres." data-parsley-maxlength="25">
+						<input type="text"  name="frase1" id="frase1_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 25 caracteres." data-parsley-maxlength="25">
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">2</span>
-						<input type="text"  name="frase2" id="frase2_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 25 caractéres." data-parsley-maxlength="25">
+						<input type="text"  name="frase2" id="frase2_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 25 caracteres." data-parsley-maxlength="25">
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">3</span>
-						<input type="text" name="frase3" id="frase3_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 25 caractéres." data-parsley-maxlength="25">
+						<input type="text" name="frase3" id="frase3_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 25 caracteres." data-parsley-maxlength="25">
 					</div>
 				</div>
 			</div>

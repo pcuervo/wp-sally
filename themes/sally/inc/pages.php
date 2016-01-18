@@ -79,4 +79,16 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
+	// VOBO
+	if( ! get_page_by_path('tutoriales-single') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Tutoriales Single',
+			'post_name'   => 'tutoriales-single',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
 });
