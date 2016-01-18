@@ -39,7 +39,7 @@ add_action( 'wp_enqueue_scripts', function(){
 
 	// scripts
 	//wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
-	wp_enqueue_script( 'plugins', JSPATH.'functions.js', array('jquery'), '2.0.3', true );
+	wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '2.0.3', true );
 	wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 	wp_enqueue_script( 'bootstrap_js', 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array(), '3.1.0', true );
 
@@ -51,7 +51,7 @@ add_action( 'wp_enqueue_scripts', function(){
 	// localize scripts
 	wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
 	wp_localize_script( 'functions', 'site_url', site_url() );
-	wp_localize_script( 'functions', 'theme_url', THEMEPATH );	
+	wp_localize_script( 'functions', 'theme_url', THEMEPATH );
 
 	// styles
 	wp_enqueue_style( 'styles', get_stylesheet_uri() );
@@ -117,14 +117,14 @@ function print_title(){
 show_admin_bar(false);
 
 /**
- * Muestra select con las categorías para los tutoriales. 
- * @return array $categories 
+ * Muestra select con las categorías para los tutoriales.
+ * @return array $categories
 */
 function show_select_categorias_tutoriales(){
 	$args = array( 'hide_empty' => false );
 	$terms = get_terms( 'categoria-tutorial', $args );
 	echo '<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Categoría</label>';
-	echo '<select class="[ form-control select-categorias ][ margin-bottom ]" name="frase1_category" id="frase1_category">';
+	echo '<select class="[ form-control select-categorias ][ margin-bottom ]" name="frase1_category" id="frase1_category" required data-parsley-error-message="Por favor selecciona una categoría." >';
 	foreach ( $terms as $term) {
 		echo '<option value="' . $term->name . '">' . $term->name . '</option>';
 	}
@@ -144,8 +144,8 @@ function show_select_categorias_tutoriales(){
 \*------------------------------------*/
 
 /**
- * Obtiene las categorías para los tutoriales. 
- * @return array $categories 
+ * Obtiene las categorías para los tutoriales.
+ * @return array $categories
 */
 function get_categorias_tutoriales(){
 	$terms = get_terms( 'categoria-tutorial' );
@@ -158,8 +158,8 @@ function get_categorias_tutoriales(){
 
 /**
  * Obtiene las categoría (nombre o slug) para un tutorial.
- * @param int $post_id 
- * @param boolean $name 
+ * @param int $post_id
+ * @param boolean $name
  * @return string $category
 */
 function get_categoria_tutorial( $post_id, $name ){

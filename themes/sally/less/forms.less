@@ -669,3 +669,97 @@ input[type="checkbox"] {
   font-style: normal;
   color: @primary;
 }
+
+#loading{ display: none; }
+
+/**
+ * Parsely validation
+**/
+
+// input.parsley-success,
+// select.parsley-success,
+// textarea.parsley-success {
+//   padding: 0 5px; border: 1px solid @brand-danger;
+//   color: #52F66D;
+// }
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  padding: 0 5px; border: 1px solid @brand-danger;
+  color: @gray-light;
+}
+
+.js-invalid-registration-msg,
+.invalid-login-msg,
+.parsley-errors-list {
+  padding: 5px 10px 5px 10px; margin: 0 0 6px 0;
+  list-style-type: none;
+  font-size: 90%;
+  background: @light;
+  color: @primary;
+  text-align: center;
+  position: relative; top: -20px;
+  opacity: 0;
+  clear: both;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}
+
+.input-group .js-invalid-registration-msg,
+.input-group .invalid-login-msg,
+.input-group .parsley-errors-list {
+  margin: 0;
+  top: 0;
+}
+
+.js-invalid-registration-msg,
+.invalid-login-msg,
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+
+.js-invalid-registration-msg,
+.invalid-login-msg{
+  margin: 10px 0;
+  display: inline-block;
+}
+
+/*------------------------------------*\
+    #Checkout & cart forms
+\*------------------------------------*/
+
+#billing_state_field,
+#billing_city_field,
+#billing_country_field{ display: none !important; }
+
+#billing_timeframe_field{
+  margin: (@margin-base*2) 0;
+  text-align: center;
+  .clearfix;
+}
+
+#billing_timeframe_field legend{
+  margin-bottom: (@margin-base/2);
+
+  font-family: @headings-font-family;
+  font-size: @font-size-h3;
+  font-weight: 600;
+  line-height: @headings-line-height;
+  color: @headings-color;
+}
+
+#billing_timeframe_field label{
+  width: 33%;
+  padding: 3px; border-bottom: 1px solid @primary;
+  background: @gray-lighter;
+  float: left;
+}
+
+#billing_timeframe_field label input{
+  display: block;
+  margin: 3px auto 5px;
+}
