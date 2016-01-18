@@ -113,5 +113,3 @@ function runIsotope(container, item){
       $container.isotope({ filter: filterValue });
     });
 }// runIsotope
-
-console.log('fuck thi shit...');
