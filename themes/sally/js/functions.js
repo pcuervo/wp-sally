@@ -35,7 +35,7 @@ function imgToSvg(){
 } //imgToSvg
 
 function playPause( video ) {
-    console.log( video );
+
     if (video.paused){
         video.play();
         return;
