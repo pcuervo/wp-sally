@@ -16,12 +16,12 @@
 			<p class="[ margin-right ][ text-uppercase ]"><strong>Filtros </strong></p>
 		</div>
 		<div class="[ col-xs-9 col-sm-6 ][ center-block ]" >
-			<p id="verfiltros">
-				<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ][  ]" href="">Todos</a>
+			<p id="verfiltros" class="[ filter-button-group ]">
+				<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ]" data-filter="*" href="">Todos</a>
 				<?php
 				$categorias_tutoriales = get_categorias_tutoriales();
 				foreach ( $categorias_tutoriales as $slug => $name ) : ?>
-					<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ][ <?php echo $slug; ?> ]" href=""><?php echo $name; ?></a>
+					<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ]" data-filter=".<?php echo $slug; ?>" href=""><?php echo $name; ?></a>
 				<?php endforeach; ?>
 			</p>
 		</div>
@@ -46,7 +46,7 @@
 		</div>
 	</div><!--/row: filtros / paginacion-->
 </div> <!--/container-->
-<section class="[ text-center ]">
+<section class="[ text-center ][ js-grid ]">
 	<?php get_template_part('templates/tutoriales', 'single'); ?>
 </section>
 <!-- modal-tutorial -->

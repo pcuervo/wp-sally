@@ -37,6 +37,7 @@ function footer_scripts(){
 						});
 					});
 
+					runIsotope('.js-grid', '.grid-item');
 
 				<?php endif; ?>
 
