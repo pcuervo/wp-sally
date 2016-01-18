@@ -16,15 +16,15 @@
 	<div class="[ form-tutorial ][ col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ][ color-light ][ margin-bottom--large ]">
 		<form id="forma-exito">
 		<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Nombre</label>
-		<input class="[ form-control ][ margin-bottom ]">
+		<input class="[ form-control ][ margin-bottom ]" name="name" id="name_field">
 		<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Título del tutorial</label>
-		<input class="[ form-control ][ margin-bottom ]">
+		<input class="[ form-control ][ margin-bottom ]" name="title" id="title_field">
 		<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Resume tu tutorial en tres frases:</label>
 			<div class="[ row ][ margin-bottom--small ]">
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">1</span>
-						<input type="text" class="[ form-control ]">
+						<input type="text" class="[ form-control ]" name="frase1" id="frase1_field">
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">2</span>
-						<input type="text" class="[ form-control ]">
+						<input type="text" class="[ form-control ]" name="frase2" id="frase2_field">
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">3</span>
-						<input type="text" class="[ form-control ]">
+						<input type="text" class="[ form-control ]" name="frase3" id="frase3_field">
 					</div>
 				</div>
 			</div>

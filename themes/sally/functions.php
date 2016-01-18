@@ -121,9 +121,10 @@ show_admin_bar(false);
  * @return array $categories 
 */
 function show_select_categorias_tutoriales(){
-	$terms = get_terms( 'categoria-tutorial' );
+	$args = array( 'hide_empty' => false );
+	$terms = get_terms( 'categoria-tutorial', $args );
 	echo '<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Categoría</label>';
-	echo '<select class="[ form-control select-categorias ][ margin-bottom ] ">';
+	echo '<select class="[ form-control select-categorias ][ margin-bottom ]" name="frase1_category" id="frase1_category">';
 	foreach ( $terms as $term) {
 		echo '<option value="' . $term->name . '">' . $term->name . '</option>';
 	}
