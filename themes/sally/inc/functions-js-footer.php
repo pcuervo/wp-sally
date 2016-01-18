@@ -45,7 +45,6 @@ function footer_scripts(){
 							'frase3_field' : $("#frase3_field").val(),
 							'frase1_category' :  $("#frase1_category").val(),
 						};
-
 						$.ajax({
 							type: 'POST',
 							url:  theme_url + 'upload_and_render.php',
