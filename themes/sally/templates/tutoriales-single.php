@@ -22,7 +22,7 @@
 				</div>
 				<div class="[ grid-item__info ]" data-toggle="modal" data-target="#tutoriales3">
 					<div class="[ relative ][ height-100 ]">
-						<button class="[ btn-play ][ center-full ]" onclick="playPause()">
+						<button class="[ btn-play ][ center-full ]">
 							<img src="<?php echo THEMEPATH; ?>img/play-btn.png">
 						</button>
 						<div class="[ grid-item__info__bg ]">
