@@ -46,6 +46,7 @@
 </div> <!--/container-->
 <section class="[ text-center ]">
 	<?php get_template_part('templates/tutoriales', 'single'); ?>
+</section>
 <!-- modal-tutorial -->
 <div id="tutoriales3" class="[ modal fade ]" tabindex="-1" role="dialog">
 	<div class="[ modal-dialog ]">
