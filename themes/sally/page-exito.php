@@ -21,61 +21,30 @@
 		<input class="[ form-control ][ margin-bottom ]">
 		<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Resume tu tutorial en tres frases:</label>
 			<div class="[ row ][ margin-bottom--small ]">
-				<div class="[ col-xs-12 col-sm-9 ]">
+				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">1</span>
 						<input type="text" class="[ form-control ]">
 					</div>
 				</div>
-				<div class="[ col-xs-12 col-sm-3 no-padding--left--sm ][ margin-bottom--small ] ">
-					<select class="[ form-control select-categorias ]">
-						<option>Ojos</option>
-						<option>Cabello</option>
-						<option>Uñas</option>
-						<option>Labios</option>
-					</select>
-				</div>
 			</div>
 			<div class="[ row ][ margin-bottom--small ]">
-				<div class="[ col-xs-12 col-sm-9 ]">
+				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">2</span>
 						<input type="text" class="[ form-control ]">
 					</div>
 				</div>
-				<div class="[ col-xs-12 col-sm-3 no-padding--left--sm ][ margin-bottom--small ] ">
-					<select class="[ form-control select-categorias ]">
-						<option>Ojos</option>
-						<option>Cabello</option>
-						<option>Uñas</option>
-						<option>Labios</option>
-					</select>
-				</div>
 			</div>
 			<div class="[ row ][ margin-bottom--small ]">
-				<div class="[ col-xs-12 col-sm-9 ]">
+				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">3</span>
 						<input type="text" class="[ form-control ]">
 					</div>
 				</div>
-				<div class="[ col-xs-12 col-sm-3 no-padding--left--sm ][ margin-bottom--small ] ">
-					<select class="[ form-control select-categorias ]">
-						<option>Ojos</option>
-						<option>Cabello</option>
-						<option>Uñas</option>
-						<option>Labios</option>
-					</select>
-				</div>
 			</div>
-			<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Categoría</label>
-			<select class="[ form-control select-categorias ][ margin-bottom ] ">
-				<option>Ojos</option>
-				<option>Cabello</option>
-				<option>Uñas</option>
-				<option>Labios</option>
-				<option><?php echo "Test"; ?></option>
-			</select>
+			<?php show_select_categorias_tutoriales(); ?>
 			<div class="[ col-xs-12 ][ margin-bottom--xlarge ][ text-center ]">
 				<input type="submit" value="Continuar" class="[ btn btn-primary ]">
 			</div>

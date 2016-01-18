@@ -116,6 +116,20 @@ function print_title(){
 
 show_admin_bar(false);
 
+/**
+ * Muestra select con las categorías para los tutoriales. 
+ * @return array $categories 
+*/
+function show_select_categorias_tutoriales(){
+	$terms = get_terms( 'categoria-tutorial' );
+	echo '<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Categoría</label>';
+	echo '<select class="[ form-control select-categorias ][ margin-bottom ] ">';
+	foreach ( $terms as $term) {
+		echo '<option value="' . $term->id . '">' . $term->name . '</option>';
+	}
+	echo '</select>';
+}// show_select_categorias_tutoriales
+
 
 
 /*------------------------------------*\
