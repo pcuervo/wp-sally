@@ -107,10 +107,11 @@ function runIsotope(container, item){
             layoutMode: 'masonry'
         });
     });
-
     $('.filter-button-group').on( 'click', 'a', function(e) {
         e.preventDefault();
       var filterValue = $(this).attr('data-filter');
       $container.isotope({ filter: filterValue });
     });
 }// runIsotope
+
+console.log('fuck thi shit...');
