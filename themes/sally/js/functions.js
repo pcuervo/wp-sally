@@ -72,6 +72,7 @@ function publishVideoWP( name, title, category, video_url, img_url ){
                 alert( response.message );
                 return;
             }
+            $('.js-video-container').hide();
             $('.js-publicar-element').show();
         }
     );
