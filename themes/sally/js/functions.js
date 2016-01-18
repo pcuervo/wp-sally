@@ -35,7 +35,6 @@ function imgToSvg(){
 } //imgToSvg
 
 function playPause( video ) {
-
     if (video.paused){
         video.play();
         return;
@@ -45,6 +44,10 @@ function playPause( video ) {
 
 function addSourceToVideo(element, src, type) {
     element.html('<source src="'+src+'" type="'+type+'"></source>');
+}
+
+function createTutorialVideo(element, src, type) {
+    element.html('<video class=" z-index---1 " id="videoTutorial" width="100%" height="100%" ><source src="'+src+'" type="'+type+'"></source>Your browser does not support the video tag.</video>');
 }
 
 function loadVideo(){
