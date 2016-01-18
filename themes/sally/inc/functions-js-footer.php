@@ -26,6 +26,9 @@ function footer_scripts(){
 
 				<?php if ( is_page( 'ver-tutoriales' ) ) : ?>
 					var myVideo = document.getElementById("videoTutorial");
+
+					runIsotope('.js-grid', '.grid-item');
+
 				<?php endif; ?>
 
 				<?php if( is_page( 'exito' ) ) : ?>

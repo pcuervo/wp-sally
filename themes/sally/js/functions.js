@@ -93,3 +93,19 @@ function getCookie( cname ) {
     }
     return "";
 };
+
+function runIsotope(container, item){
+    var $container = $(container);
+    $container.imagesLoaded( function(){
+        $container.isotope({
+            itemSelector : item,
+            layoutMode: 'masonry'
+        });
+    });
+
+    $('.filter-button-group').on( 'click', 'a', function(e) {
+        e.preventDefault();
+      var filterValue = $(this).attr('data-filter');
+      $container.isotope({ filter: filterValue });
+    });
+}// runIsotope

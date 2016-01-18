@@ -29,6 +29,15 @@ function imgToSvg(){
     });
 } //imgToSvg
 
+function runIsotope( container, item ){
+    var $container = $(container).imagesLoaded( function() {
+        $container.packery({
+            "itemSelector": "item",
+            "gutter": 0,
+            "columnWidth": "item"
+        });
+    });
+}
 
 /*------------------------------------*\
     #TOGGLE FUNCTIONS
