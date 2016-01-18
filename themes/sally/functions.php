@@ -100,12 +100,12 @@ function save_tutorial(){
 
 	add_post_meta( $post_id, '_nombre_meta', $nombre );
 	add_post_meta( $post_id, '_url_video_meta', $url_video );
-	add_post_meta( $post_id, THEMEPATH . '_url_imagen_meta', $url_imagen );
+	add_post_meta( $post_id, '_url_imagen_meta', $url_imagen );
 	$categoria_tutorial_term = get_term_by( 'name', $categoria_tutorial, 'categoria-tutorial' );
 	wp_set_object_terms( $post_id, array( $categoria_tutorial_term->term_id ), 'categoria-tutorial' );
 	
 	$message = array(
-		'error'		=> 1,
+		'error'		=> 0,
 		'message'	=> '¡Tutorial guardado exitosamente!'
 	);
 	echo json_encode($message , JSON_FORCE_OBJECT);
