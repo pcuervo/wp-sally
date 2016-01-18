@@ -34,9 +34,12 @@ function footer_scripts(){
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
 						playPause( $('#videoTutorial')[0] );
 					});
-
 					runIsotope('.js-grid', '.grid-item');
 
+					$('#tutoriales3').on('hide.bs.modal', function (e) {
+						console.log( 'pausing...' );
+						playPause( $('#videoTutorial')[0] );
+					});
 				<?php endif; ?>
 
 				<?php if( is_page( 'exito' ) ) : ?>
@@ -90,12 +93,9 @@ function footer_scripts(){
 						$(this).hide();
 						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
 					});
-	
+						
 				<?php endif; ?>
 
-				<?php if ( is_page( 'tutoriales-single' ) ) : ?>
-
-				<?php endif; ?>
 			});
 		</script>
 <?php
