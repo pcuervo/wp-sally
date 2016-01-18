@@ -101,7 +101,9 @@
 
 					$total_video_frames = exec("/usr/bin/ffprobe -i ".$video_path." -show_frames 2>&1|grep -c '^\[FRAME'");
 
-					$frame_rate_distribution = ($total_video_frames + 318) / 5;
+					$total_video_frames = ($total_video_frames / 2) - 150 ;
+
+					$frame_rate_distribution = ($total_video_frames + 320) / 5;
 
 					$frame_rate_super_1 = $frame_rate_distribution;
 
@@ -155,7 +157,8 @@
 						file_put_contents( $path."/sally/render/img/".$random_string.'.jpg' ,  file_get_contents( $jpg  ) );
 
 						$data['success'] = true;
-        				$data['video_url']  = $random_string.".mp4";
+						$data['video_url']  = $random_string.".mp4";
+        				$data['img_url'] = $random_string.".jpg";
 						
 
 					}else{

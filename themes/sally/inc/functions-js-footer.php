@@ -57,10 +57,13 @@ function footer_scripts(){
 							}
 						})
 						.done(function(data){
+							console.log(data);
 							$("#loading").hide();
 							localStorage.setItem("video_url" , data.video_url);
+							localStorage.setItem("img_url", data.img_url);
 							localStorage.setItem("title", $("#title_field").val());
 							localStorage.setItem("name", $("#name_field").val())
+							localStorage.setItem("category", $("#frase1_category").val());
 			 				window.location.href = site_url + '/vobo';
 						});
 					 	event.preventDefault();
