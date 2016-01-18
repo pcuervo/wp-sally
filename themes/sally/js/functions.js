@@ -54,8 +54,27 @@ function emptyVideo(){
     $('.js-video-container').empty();
 }
 
-//Compartir redes
+function publishVideoWP( name, title, category, video_url, img_url ){
+    $.post(
+        ajax_url,
+        {
+            name:       name,
+            title:      title,
+            category:   category,
+            video_url:  video_url,
+            img_url:    img_url,
+            action: 'save_tutorial'
+        },
+        function( response ){
+            console.log( response );
+            if( parseInt( response.error ) ) return 0;
+            
+            return 1;
+        }
+    );
+}// publishVideoWP
 
+//Compartir redes
 function loadRedes(){
     $('.js-publicar-container').load( "ajax/comparte.html .js-publicar-element", function(){
         imgToSvg();

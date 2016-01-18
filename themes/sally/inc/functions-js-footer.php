@@ -58,8 +58,8 @@ function footer_scripts(){
 						.done(function(data){
 							console.log(data);
 							$("#loading").hide();
-							localStorage.setItem("video_url" , data.video_url);
-							localStorage.setItem("img_url", data.img_url);
+							localStorage.setItem("video_url" , 'render/videos/' + data.video_url);
+							localStorage.setItem("img_url", 'render/img' + data.img_url);
 							localStorage.setItem("title", $("#title_field").val());
 							localStorage.setItem("name", $("#name_field").val())
 							localStorage.setItem("category", $("#frase1_category").val());
@@ -72,6 +72,7 @@ function footer_scripts(){
 				<?php if( is_page( 'vobo' ) ) : ?>
 					$('.js-publicar-element').hide();
 					$('.js-publicar-opener').on('click', function(){
+						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
 						$('.js-publicar-element').show();
 					});
 

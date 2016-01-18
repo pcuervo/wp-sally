@@ -68,12 +68,18 @@ add_action( 'wp_footer', 'footer_scripts', 21 );
  *
  * @param string $nombre - Nombre de la autora
  * @param string $titulo - Título del tutorial
- * @param int $id_categoria - ID de taxonomy term de categoría
+ * @param string $categoria - taxonomy term de categoría
  * @param string $url_video - URL de video del tutorial
  * @param string $url_imagen - URL relative de thumb del video
  * @return integer $post_id - ID del post creado.
  */
-function save_tutorial( $nombre, $titulo, $id_categoria_tutorial, $url_video, $url_imagen ){
+function save_tutorial(){
+
+	$nombre = $_POST['name'];  
+	$titulo =  $_POST['title'];
+	$categoria_tutorial =  $_POST['category'];
+	$url_video =  $_POST['video_url'];
+	$url_imagen = $_POST['img_url'];
 	// Create post object
 	$tutorial_post = array(
 		'post_title'    => $titulo,
@@ -83,14 +89,30 @@ function save_tutorial( $nombre, $titulo, $id_categoria_tutorial, $url_video, $u
 	);
 	$post_id = wp_insert_post( $tutorial_post );
 
-	if( ! $post_id ) return 0;
+	if( ! $post_id ){
+		$message = array(
+			'error'		=> 1,
+			'message'	=> 'No se pudo guardar el tutorial.',
+		);
+		echo json_encode($message , JSON_FORCE_OBJECT);
+		exit();
+	}
 
 	add_post_meta( $post_id, '_nombre_meta', $nombre );
 	add_post_meta( $post_id, '_url_video_meta', $url_video );
 	add_post_meta( $post_id, THEMEPATH . '_url_imagen_meta', $url_imagen );
-	$id = wp_set_object_terms( $post_id, array( $id_categoria_tutorial ), 'categoria-tutorial' );
-	return $post_id;
+	$categoria_tutorial_term = get_term_by( 'name', $categoria_tutorial, 'categoria-tutorial' );
+	wp_set_object_terms( $post_id, array( $categoria_tutorial_term->term_id ), 'categoria-tutorial' );
+	
+	$message = array(
+		'error'		=> 1,
+		'message'	=> '¡Tutorial guardado exitosamente!'
+	);
+	echo json_encode($message , JSON_FORCE_OBJECT);
+	exit();
 }// save_tutorial
+add_action("wp_ajax_save_tutorial", "save_tutorial");
+add_action("wp_ajax_nopriv_save_tutorial", "save_tutorial");
 
 
 
