@@ -57,6 +57,7 @@ function footer_scripts(){
 							}
 						})
 						.done(function(data){
+							console.log(data);
 							$("#loading").hide();
 							localStorage.setItem("video_url" , data.video_url);
 							localStorage.setItem("title", $("#title_field").val());
