@@ -37,42 +37,36 @@ function footer_scripts(){
 							'name' : $("#name_field").val(),
 							'title': $("#title_field").val(),
 							'frase1_field' : $("#frase1_field").val(),
-							'frase1_category' : $("#frase1_category").val(),
 							'frase2_field' : $("#frase2_field").val(),
-							'frase2_category': $("#frase2_category").val(),
 							'frase3_field' : $("#frase3_field").val(),
-							'frase3_category' : $("#frase3_category").val(),
 							'category' :  $("#category").val(),
 						};
 
-						// $.ajax({
-						// 	type: 'POST',
-						// 	url:  'upload_and_render.php',
-						// 	data: formData,
-						// 	dataType: 'json',
-						// 	encode : true,
-						// 	beforeSend : function(){
-						// 		$("#loading").show();
-						// 	}
-						// })
-						// .done(function(data){
-						// 	console.log(data)
-						// 	$("#loading").hide();
-						// 	document.cookie = "video_url =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-						// 	document.cookie = "video_url = " + data.video_url;
+						$.ajax({
+							type: 'POST',
+							url:  theme_url + '/upload_and_render.php',
+							data: formData,
+							dataType: 'json',
+							encode : true,
+							beforeSend : function(){
+								$("#loading").show();
+							}
+						})
+						.done(function(data){
+							$("#loading").hide();
 
-						// 	document.cookie = "title =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-						// 	document.cookie = "title =" +   $("#title_field").val();
+							document.cookie = "video_url =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+			 				document.cookie = "video_url = " + data.video_url;
 
-						// 	document.cookie = "name =;  expires=Thu, 01 Jan 1970 00:00:00 UTC";
-						// 	document.cookie = "name = " +  $("#name_field").val();
-						// 	window.location.href = 'http://localhost:8888/sally/sally/tutoriales-single.html';
-			 		// 		document.cookie = "name =;  expires=Thu, 01 Jan 1970 00:00:00 UTC";
-			 		// 		document.cookie = "name = " +  $("#name_field").val();
-			 		// 		window.location.href = 'http://localhost:8888/sally/sally/tutoriales-single.html';
-						// });
-					 //event.preventDefault();
+			 				document.cookie = "title =; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+			 				document.cookie = "title =" +   $("#title_field").val();
 
+			 				document.cookie = "name =;  expires=Thu, 01 Jan 1970 00:00:00 UTC";
+			 				document.cookie = "name = " +  $("#name_field").val();
+
+			 				window.location.href = site_url + '/vobo';
+						});
+					 	event.preventDefault();
 					});
 				<?php endif; ?>
 
