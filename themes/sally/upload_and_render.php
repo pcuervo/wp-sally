@@ -157,7 +157,8 @@
 						file_put_contents( $path."/sally/render/img/".$random_string.'.jpg' ,  file_get_contents( $jpg  ) );
 
 						$data['success'] = true;
-        				$data['video_url']  = $random_string.".mp4";
+						$data['video_url']  = $random_string.".mp4";
+        				$data['img_url'] = $random_string.".jpg";
 						
 
 					}else{
