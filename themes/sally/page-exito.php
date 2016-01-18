@@ -14,17 +14,17 @@
 		</div>
 	</div>
 	<div class="[ form-tutorial ][ col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ][ color-light ][ margin-bottom--large ]">
-		<form id="forma-exito">
-		<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Nombre</label>
-		<input class="[ form-control ][ margin-bottom ]">
-		<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Título del tutorial</label>
-		<input class="[ form-control ][ margin-bottom ]">
-		<label class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Resume tu tutorial en tres frases:</label>
+		<form id="forma-exito" data-parsley-validate data-parsley-maxwords="30">
+			<label for="nombre" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Nombre</label>
+			<input type="text" name="nombre" class="[ form-control ][ margin-bottom ]" required="" data-parsley-error-message="Por favor ingresa la información necesaria.">
+			<label for="titulo-del-tutorial" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Título del tutorial</label>
+			<input type="text" name="titulo-del-tutorial" class="[ form-control ][ margin-bottom ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria.">
+			<label for="resumen-1" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Resume tu tutorial en tres frases:</label>
 			<div class="[ row ][ margin-bottom--small ]">
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">1</span>
-						<input type="text" class="[ form-control ]">
+						<input type="text" name="resumen-1" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria.">
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">2</span>
-						<input type="text" class="[ form-control ]">
+						<input type="text" name="resumen-2" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria.">
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">3</span>
-						<input type="text" class="[ form-control ]">
+						<input type="text" name="resumen-3" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria.">
 					</div>
 				</div>
 			</div>

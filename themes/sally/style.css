@@ -3142,6 +3142,9 @@ select[multiple].input-lg {
   font-style: normal;
   color: #f90e42;
 }
+#loading {
+  display: none;
+}
 .btn {
   display: inline-block;
   margin-bottom: 0;
