@@ -44,7 +44,7 @@ function footer_scripts(){
 
 						$.ajax({
 							type: 'POST',
-							url:  theme_url + '/upload_and_render.php',
+							url:  theme_url + 'upload_and_render.php',
 							data: formData,
 							dataType: 'json',
 							encode : true,
