@@ -6232,6 +6232,12 @@ button.list-group-item-danger.active:focus {
   width: 100%;
   text-align: center;
 }
+.cameratag_ready {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
 .camera_tag .cameratag_screen.cameratag_start {
   background: -webkit-linear-gradient(top, #000000 0%, #282828 60%, #000000 100%);
   background: -moz-linear-gradient(top, #000000 0%, #282828 60%, #000000 100%);
