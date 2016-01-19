@@ -1,11 +1,14 @@
 <?php
+	global $query_tutoriales;
+	$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 	$tutoriales_args = array(
 		'post_type' 		=> 'tutoriales',
-		'posts_per_page'	=> -1,
+		'posts_per_page'	=> 9,
 		'orderby'			=> 'date',
 		'order'				=> 'ASC',
+		'paged'				=> $paged,
 	);
-	$query_tutoriales = new WP_Query( $tutoriales_args );
+	$query_tutoriales = new WP_Query( $tutoriales_args );	
 	if( $query_tutoriales->have_posts() ) : while( $query_tutoriales->have_posts() ) : $query_tutoriales->the_post();
 		$image_url = THEMEPATH . get_post_meta( $post->ID, '_url_imagen_meta', true );
 		$video_url = get_post_meta( $post->ID, '_url_video_meta', true );
