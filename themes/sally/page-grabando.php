@@ -31,15 +31,15 @@
 		</div>
 	</div>
 	<div id="myVideo-countdown-screen"  class="cameratag_screen cameratag_count">
+		<div class="[ cameratag_ready ][ color-light ][ font-title ][ padding-bottom ]">¿Lista?</div>
 		<div class="[ cameratag_countdown_status ][ color-primary ][ font-title ]">1</div>
-		<div class="[ cameratag_prompt ][ color-light ][ font-title ][ padding-bottom ]">¿Estás lista?</div>
 	</div>
 	<div id="myVideo-recording-screen" class="[ cameratag_screen cameratag_recording cameratag_stop_recording ]">
 		<div class="[ cameratag_prompt ][ text-center ]">
 			<div class="[ row ]">
 				<div class="[ cameratag_screen__info ][ margin-bottom--small ][ col-xs-12 col-sm-2 col-sm-offset-4 ]">
 					<p class="[ text-uppercase ][ no-margin ]"><strong>Grabando</strong></p>
-					<img src="//www.cameratag.com/assets/recording.gif"> <span class="[ cameratag_record_timer_prompt ]">140</span>
+					<img src="//www.cameratag.com/assets/recording.gif"> <span class="[ cameratag_record_timer_prompt ]">180</span> seg.
 				</div>
 				<div class="[ cameratag_screen__info_stop ][ margin-bottom--small ][ col-xs-12 col-sm-2 ]">
 					<p class="[ text-uppercase ][ no-margin ]"><strong>stop</strong></p>

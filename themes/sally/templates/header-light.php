@@ -1,6 +1,6 @@
 <header class="[ container ]">
 	<a href="<?php echo site_url(); ?>">
-		<img class="[ logo ]" src="<?php echo THEMEPATH; ?>img/logo.jpg">
+		<img class="[ logo ]" src="<?php echo THEMEPATH; ?>img/logo.png">
 	</a>
 	<span class="[ visible-xs ][ pull-right ]">
 		<a type="button" data-toggle="modal" data-target="#modal-nav">
