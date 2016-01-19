@@ -4,6 +4,7 @@ the_post();
 
 $image_urls = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
 $nombre = get_post_meta( $post->ID, '_nombre_meta', true );
+$url_video = THEMEPATH . get_post_meta( $post->ID, '_url_video_meta', true );
 $slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 ?>
 <section class="[ container ]">
@@ -18,16 +19,8 @@ $slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 
 			<div class="[ col-xs-12 ][ margin-bottom--large ]">
 				<div style="text-center">
-					<!--
-					<button onclick="playPause()">Play/Pause</button>
-					<button onclick="makeBig()">Big</button>
-					<button onclick="makeSmall()">Small</button>
-					<button onclick="makeNormal()">Normal</button>
-					<br><br>-->
 					<video id="video1" width="100%" height="100%" controls>
-						<source src="movie.mp4" type="video/mp4">
-						<source src="movie.ogg" type="video/ogg">
-						 <source type="video/webm" src="video.webm" />
+						<source src="<?php echo $url_video; ?>" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
@@ -35,7 +28,7 @@ $slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 
 			<div class="[ col-xs-12 ][ margin-bottom ]">
 				<div class="[ inline-block align-middle ][ margin-sides ]">
-					<a href="tutoriales.html" class="[ btn btn-secondary width-100 ][ text-uppercase ][ no-margin ]">Ver más tutoriales</a>
+					<a href="<?php echo site_url('ver-tutoriales'); ?>" class="[ btn btn-secondary width-100 ][ text-uppercase ][ no-margin ]">Ver más tutoriales</a>
 				</div>
 				<div class="[ margin-bottom ][ visible-xs ]"></div>
 				<div class="[ inline-block align-middle ][ margin-sides ][ text-center ]">

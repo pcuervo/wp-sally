@@ -9,7 +9,7 @@
 					<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>img/maquillaje.png">
 				</div>
 				<p class="[ text-uppercase ]"><strong>¡Listo!</strong></p>
-				<p>Casi acabamos, solo llena el siguiente formulario para ver el resultado</p>
+				<p>Casi acabamos, sólo llena el siguiente formulario para ver el resultado.</p>
 			</div>
 		</div>
 	</div>
@@ -24,7 +24,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">1</span>
-						<input type="text"  name="frase1" id="frase1_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 60 caracteres." data-parsley-maxlength="60">
+						<input type="text"  name="frase1" id="frase1_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120">
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">2</span>
-						<input type="text"  name="frase2" id="frase2_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 60 caracteres." data-parsley-maxlength="60">
+						<input type="text"  name="frase2" id="frase2_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120">
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">3</span>
-						<input type="text" name="frase3" id="frase3_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 60 caracteres." data-parsley-maxlength="60">
+						<input type="text" name="frase3" id="frase3_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120">
 					</div>
 				</div>
 			</div>

@@ -25,14 +25,14 @@
 					<img class="[ svg icon icon--stroke icon--responsive ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/webcam.svg">
 				</div>
 				<div class="[ margin-bottom ]">
-					<p class="[ large ][ no-margin ]"><strong>Estamos a punto de comenzar</strong></p>
+					<p class="[ large ][ no-margin ]"><strong>¡Estás a punto de comenzar!</strong></p>
 				</div>
 			</section>
 		</div>
 	</div>
 	<div id="myVideo-countdown-screen"  class="cameratag_screen cameratag_count">
 		<div class="[ cameratag_countdown_status ][ color-primary ][ font-title ]">1</div>
-		<div class="[ cameratag_prompt ][ color-light ][ font-title ][ padding-bottom ]">Grabando en…</div>
+		<div class="[ cameratag_prompt ][ color-light ][ font-title ][ padding-bottom ]">¿Estás lista?</div>
 	</div>
 	<div id="myVideo-recording-screen" class="[ cameratag_screen cameratag_recording cameratag_stop_recording ]">
 		<div class="[ cameratag_prompt ][ text-center ]">
