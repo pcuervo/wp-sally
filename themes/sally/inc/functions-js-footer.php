@@ -37,7 +37,7 @@ function footer_scripts(){
 						createTutorialVideo( $('.js-video-container'), video_url, 'video/mp4' );
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
-						$('.js-modal-share').text( $(this).find('.js-url-share').text() );
+						$('.btn-fb').data( 'share-url', $(this).find('.js-url-share').text() );
 						playPause( $('#videoTutorial')[0] );
 					});
 

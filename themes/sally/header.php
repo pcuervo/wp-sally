@@ -35,7 +35,7 @@
 			$video_url = get_post_meta( $post->ID, '_url_video_meta', true );
 
 		?>
-			<meta property="og:url" content="<?php echo the_permalink(); ?>" />
+			<meta property="og:url" content="<?php echo get_permalink(); ?>" />
 	
 			<meta property="og:title" content="<?php echo get_the_title(); ?>" />
 			<meta property="og:description" content="Sally - Comparte tu belleza. ¿Te gustaría contagiar al mundo con tu belleza? Graba tu tutorial y comparte los mejores tips." />
