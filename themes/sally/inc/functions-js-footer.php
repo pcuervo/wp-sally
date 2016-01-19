@@ -18,13 +18,15 @@ function footer_scripts(){
 					CameraTag.observe('myVideo', 'playbackStarted', function(){
 					 	myCamera = CameraTag.cameras["myVideo"];
 					 	myCamera.stopPlayback();
-
 					});
 					CameraTag.observe('myVideo', 'published', function(){
 						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
 						var uuid = document.getElementById("myVideo_video_uuid").value;
 						localStorage.setItem("uuid", uuid);
 						window.location.href = site_url + '/exito';
+					});
+					CameraTag.observe('myVideo', 'recordingStopped', function(){
+					 	alert('this video is counting down!')
 					});
 
 				<?php endif ?>

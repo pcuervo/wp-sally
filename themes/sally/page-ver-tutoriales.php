@@ -25,7 +25,6 @@
 				<?php endforeach; ?>
 			</p>
 		</div>
-
 		<div class="[ hidden-xs hidden-sm ][ col-sm-5 ][ text-right ][ hidden ]">
 			<ul class="[ pagination large ][ color-primary ]">
 				<li>
