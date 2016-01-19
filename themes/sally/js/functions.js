@@ -113,3 +113,12 @@ function runIsotope(container, item){
       $container.isotope({ filter: filterValue });
     });
 }// runIsotope
+
+function shareVideoFB( url ){
+    FB.ui({
+        method: 'share',
+        href: url,
+    }, function(response){
+        console.log( response );
+    });
+}

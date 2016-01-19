@@ -11,6 +11,7 @@
 		$video_url = get_post_meta( $post->ID, '_url_video_meta', true );
 		$nombre = get_post_meta( $post->ID, '_nombre_meta', true );
 		$slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
+		$share_url = the_permalink();
 	?>
 		<div class="[ col-xs-6 col-sm-3 col-md-4 ][ no-padding ][ grid-item ][ <?php echo $slug_categoria_tutorial; ?> ]" data-toggle="modal" data-target="#tutoriales3">
 			<div class="[ padding--square ][ bg-image ][ relative ][ grid-item__image ]" style="background-image: url('<?php echo $image_url ?>');">
@@ -29,6 +30,7 @@
 							<p class="[ text-uppercase color-black ][ no-margin ][ fz-small ][ js-nombre ]"><strong> <?php echo $nombre; ?></strong></p>
 							<p class="[ color-light ][ no-margin ][ fz-small ][ js-titulo ]"><?php echo get_the_title(); ?></p>
 							<span class="[ hidden ][ js-url-video ]"><?php echo $video_url; ?></span>
+							<span class="[ hidden ][ js-url-share ]"><?php echo $share_url; ?></span>
 						</div>
 					</div>
 				</div>

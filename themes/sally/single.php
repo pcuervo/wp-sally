@@ -2,7 +2,6 @@
 get_header(); 
 the_post(); 
 
-$image_urls = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
 $nombre = get_post_meta( $post->ID, '_nombre_meta', true );
 $url_video = THEMEPATH . get_post_meta( $post->ID, '_url_video_meta', true );
 $slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );

@@ -28,6 +28,30 @@
 		<script src="https://use.typekit.net/lus4pyy.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<?php wp_head(); ?>
+
+		<?php if ( is_single() ) : 
+			global $post;
+			$image_url = THEMEPATH . get_post_meta( $post->ID, '_url_imagen_meta', true );
+			$video_url = get_post_meta( $post->ID, '_url_video_meta', true );
+
+		?>
+			<meta property="og:url" content="<?php echo the_permalink(); ?>" />
+	
+			<meta property="og:title" content="<?php echo get_the_title(); ?>" />
+			<meta property="og:description" content="Sally - Comparte tu belleza. ¿Te gustaría contagiar al mundo con tu belleza? Graba tu tutorial y comparte los mejores tips." />
+			
+			<meta property="og:type" content="video.movie" />
+			<meta property="og:video:width" content="640" />
+			<meta property="og:video:height" content="385" />
+			
+			<meta property="og:image" content="<?php echo $image_url; ?>">
+			<meta property="og:image:width" content="320" />
+			<meta property="og:image:height" content="180" />
+			
+			<meta property="og:video" content="<?php echo THEMEPATH; ?>player.swf?bufferlength=3&lightcolor=333333&autostart=true&file=<?php echo THEMEPATH . 'render/videos/' . $video_url; ?>&provider=http&frontcolor=CCCCCC&image=<?php echo $image_url; ?>&backcolor=FFFFFF" />
+			
+			<meta property="fb:app_id" content="1107163669301864" />
+		<?php endif; ?>
 	</head>
 
 	<body <?php if ( ! is_home() && ! is_page( 'ver-tutoriales' ) ) echo 'class="bg-primary"'; body_class();  ?>>

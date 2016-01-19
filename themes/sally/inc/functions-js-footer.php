@@ -37,11 +37,11 @@ function footer_scripts(){
 						createTutorialVideo( $('.js-video-container'), video_url, 'video/mp4' );
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
+						$('.js-modal-share').text( $(this).find('.js-url-share').text() );
 						playPause( $('#videoTutorial')[0] );
 					});
 
 					runIsotope('.js-grid', '.grid-item');
-
 					$('#tutoriales3').on('hide.bs.modal', function (e) {
 						console.log( 'pausing...' );
 						playPause( $('#videoTutorial')[0] );
@@ -102,6 +102,26 @@ function footer_scripts(){
 					});
 
 				<?php endif; ?>
+
+				<?php if( is_single() ) : ?>
+
+				<?php endif; ?>
+
+				window.fbAsyncInit = function() {
+					FB.init({
+						appId  	: '1107163669301864',
+						xfbml   : true,
+						version	: 'v2.3'
+					});
+				};
+
+				(function(d, s, id){
+				    var js, fjs = d.getElementsByTagName(s)[0];
+				    if (d.getElementById(id)) {return;}
+				    js = d.createElement(s); js.id = id;
+				    js.src = "//connect.facebook.net/en_US/sdk.js";
+				    fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
 
 			});
 		</script>
