@@ -15,6 +15,11 @@ function footer_scripts(){
 					CameraTag.observe('myVideo', 'initialized', function () {
 						document.getElementById('grabar').click();
 					});
+					CameraTag.observe('myVideo', 'playbackStarted', function(){
+					 	myCamera = CameraTag.cameras["myVideo"];
+					 	myCamera.stopPlayback();
+
+					});
 					CameraTag.observe('myVideo', 'published', function(){
 						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
 						var uuid = document.getElementById("myVideo_video_uuid").value;
