@@ -37,7 +37,9 @@ function footer_scripts(){
 						createTutorialVideo( $('.js-video-container'), video_url, 'video/mp4' );
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
-						$('.btn-fb').data( 'share-url', $(this).find('.js-url-share').text() );
+						var shareUrl =  $(this).find('.js-url-share').text();
+						console.log(shareUrl);
+						$('.btn-fb').attr( 'data-share-url', shareUrl );
 						playPause( $('#videoTutorial')[0] );
 					});
 
@@ -47,6 +49,12 @@ function footer_scripts(){
 						playPause( $('#videoTutorial')[0] );
 						$('.js-video-container video').remove();
 					});
+
+					$('.btn-fb').click( function(e){
+						e.preventDefault();
+						var shareUrl = $(this).data( 'share-url' );
+						shareVideoFB( shareUrl );
+					});	
 				<?php endif; ?>
 
 				<?php if( is_page( 'exito' ) ) : ?>

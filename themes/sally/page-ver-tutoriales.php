@@ -67,7 +67,6 @@
 					</div>
 				</div>
 			</div>
-
 			<!-- video -->
 			<div class="[ js-video-container ]"></div>
 
@@ -80,10 +79,10 @@
 					</div>
 				</div>
 				<div>
-					<a href="#" class="[ btn-fb ]" data-share-url="">
+					<a href="#" class="[ btn-twitter ]" data-share-url="">
 						<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 					</a>
-					<a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"  target="_blank">
+					<a href="#" class="[ btn-fb ]" data-share-url="" >
 						<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg">
 					</a>
 				</div>

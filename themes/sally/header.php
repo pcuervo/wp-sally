@@ -35,7 +35,7 @@
 			$video_url = get_post_meta( $post->ID, '_url_video_meta', true );
 
 		?>
-			<meta property="og:url" content="<?php echo get_permalink(); ?>" />
+			<meta property="og:url" content="<?php echo get_permalink() ?>" />
 	
 			<meta property="og:title" content="<?php echo get_the_title(); ?>" />
 			<meta property="og:description" content="Sally - Comparte tu belleza. ¿Te gustaría contagiar al mundo con tu belleza? Graba tu tutorial y comparte los mejores tips." />
@@ -48,7 +48,7 @@
 			<meta property="og:image:width" content="320" />
 			<meta property="og:image:height" content="180" />
 			
-			<meta property="og:video" content="<?php echo THEMEPATH; ?>player.swf?bufferlength=3&lightcolor=333333&autostart=true&file=<?php echo THEMEPATH . 'render/videos/' . $video_url; ?>&provider=http&frontcolor=CCCCCC&image=<?php echo $image_url; ?>&backcolor=FFFFFF" />
+			<meta property="og:video" content="<?php echo THEMEPATH; ?>player.swf?bufferlength=3&lightcolor=333333&autostart=true&file=<?php echo rawurlencode( THEMEPATH . $video_url ); ?>&provider=http&frontcolor=CCCCCC&image=<?php echo rawurlencode( $image_url ); ?>&backcolor=FFFFFF" />
 			
 			<meta property="fb:app_id" content="1107163669301864" />
 		<?php endif; ?>
