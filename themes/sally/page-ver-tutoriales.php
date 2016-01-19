@@ -67,12 +67,10 @@
 					</div>
 				</div>
 			</div>
+
 			<!-- video -->
 			<div class="[ js-video-container ]"></div>
-			
-			<!-- play video -->
-			<button class="[ btn-play ]"><img src="<?php echo THEMEPATH; ?>img/play-btn.png">
-			</button>
+
 		</div>
 		<div class="relative">
 			<div class="[ text-center ]">

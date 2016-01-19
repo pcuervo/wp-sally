@@ -27,12 +27,14 @@ function footer_scripts(){
 				<?php if ( is_page( 'ver-tutoriales' ) ) : ?>
 					var myVideo = document.getElementById("videoTutorial");
 
-					$('.grid-item__info').click( function(){
+					$('.grid-item').click( function(){
 						var video_url = '<?php echo THEMEPATH ?>' + $(this).find('.js-url-video').text();
 						createTutorialVideo( $('.js-video-container'), video_url, 'video/mp4' );
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
+						playPause( $('#videoTutorial')[0] );
 					});
+
 					runIsotope('.js-grid', '.grid-item');
 
 					$('#tutoriales3').on('hide.bs.modal', function (e) {
@@ -84,7 +86,7 @@ function footer_scripts(){
 				<?php endif; ?>
 
 				<?php if( is_page( 'vobo' ) ) : ?>
-					
+
 					var video_url = '<?php echo THEMEPATH ?>' + localStorage.getItem('video_url');
 					addSourceToVideo( $('#video1'), video_url, 'video/mp4');
 
@@ -93,7 +95,7 @@ function footer_scripts(){
 						$(this).hide();
 						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
 					});
-						
+
 				<?php endif; ?>
 
 			});
