@@ -35,7 +35,7 @@
 						<a href="#" class="[ btn-tw ]" data-share-url="" target="_blank">
 							<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 						</a>
-						<a href="#" class="[ btn-fb ]">
+						<a href="#" class="[ btn-fb ]" data-share-url="">
 							<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg">
 						</a>
 						<hr>
