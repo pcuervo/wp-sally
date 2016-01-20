@@ -26,7 +26,7 @@ function footer_scripts(){
 						window.location.href = site_url + '/exito';
 					});
 					CameraTag.observe('myVideo', 'recordingStopped', function(){
-					 	alert('this video is counting down!')
+						console.log('this video is counting down!')
 					});
 
 				<?php endif ?>

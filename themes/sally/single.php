@@ -1,6 +1,6 @@
-<?php 
-get_header(); 
-the_post(); 
+<?php
+get_header();
+the_post();
 
 $nombre = get_post_meta( $post->ID, '_nombre_meta', true );
 $url_video = THEMEPATH . get_post_meta( $post->ID, '_url_video_meta', true );
@@ -31,13 +31,13 @@ $slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 				</div>
 				<div class="[ margin-bottom ][ visible-xs ]"></div>
 				<div class="[ inline-block align-middle ][ margin-sides ][ text-center ]">
-					<p class="[ color-primary ][ text-uppercase ]"><strong>Compartir</strong></p>
+					<p class="[ color-light ][ text-uppercase ]"><strong>Compartir</strong></p>
 					<div class="[ margin-top ]">
 						<a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');"  target="_blank">
-							<img class="[ svg icon--fill icon--iconed icon--thickness-3 ][ color-primary ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+							<img class="[ svg icon--fill icon--iconed icon--thickness-3 ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 						</a>
 						<a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"  target="_blank">
-							<img  class="[ svg icon--fill icon--iconed icon--thickness-3 ][ color-primary ][ margin-sides--small ]"src="<?php echo THEMEPATH; ?>icons/facebook.svg">
+							<img  class="[ svg icon--fill icon--iconed icon--thickness-3 ][ color-light ][ margin-sides--small ]"src="<?php echo THEMEPATH; ?>icons/facebook.svg">
 						</a>
 					</div>
 				</div>
