@@ -33,10 +33,10 @@ $slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 				<div class="[ inline-block align-middle ][ margin-sides ][ text-center ]">
 					<p class="[ color-light ][ text-uppercase ]"><strong>Compartir</strong></p>
 					<div class="[ margin-top ]">
-						<a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');"  target="_blank">
+						<a class="[ btn-tw ]" href="http://twitter.com/home?status=Sally Beauty - <?php the_title(); ?> - <?php echo get_permalink($post->ID);?>" target="_blank">
 							<img class="[ svg icon--fill icon--iconed icon--thickness-3 ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 						</a>
-						<a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"  target="_blank">
+						<a class="[ btn-fb ]" data-share-url="<?php echo get_permalink(); ?>" href="#">
 							<img  class="[ svg icon--fill icon--iconed icon--thickness-3 ][ color-light ][ margin-sides--small ]"src="<?php echo THEMEPATH; ?>icons/facebook.svg">
 						</a>
 					</div>

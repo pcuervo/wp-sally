@@ -43,12 +43,14 @@ function footer_scripts(){
 
 					$('.grid-item').click( function(){
 						var video_url = '<?php echo THEMEPATH ?>' + $(this).find('.js-url-video').text();
+						var video_title = $(this).find('.js-titulo').text();
 						createTutorialVideo( $('.js-video-container'), video_url, 'video/mp4' );
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
 						var shareUrl =  $(this).find('.js-url-share').text();
 						console.log(shareUrl);
 						$('.btn-fb').attr( 'data-share-url', shareUrl );
+						$('.btn-tw').attr( 'href', 'http://twitter.com/home?status=Sally Beauty - '+video_title+' - '+shareUrl );
 						playPause( $('#videoTutorial')[0] );
 					});
 
@@ -116,10 +118,21 @@ function footer_scripts(){
 						publishVideoWP( localStorage.getItem('name'), localStorage.getItem('title'), localStorage.getItem('category'), localStorage.getItem('video_url'), localStorage.getItem('img_url') );
 					});
 
+					$('.btn-fb').click( function(e){
+						e.preventDefault();
+						var shareUrl = $(this).data( 'share-url' );
+						shareVideoFB( shareUrl );
+					});
+
 				<?php endif; ?>
 
-				<?php if( is_single() ) : ?>
+				<?php if( is_singular('tutoriales') ) : ?>
+					$('.btn-fb').click( function(e){
 
+						e.preventDefault();
+						var shareUrl = $(this).data( 'share-url' );
+						shareVideoFB( shareUrl );
+					});
 				<?php endif; ?>
 
 				window.fbAsyncInit = function() {

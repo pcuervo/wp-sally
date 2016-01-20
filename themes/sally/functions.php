@@ -75,7 +75,7 @@ add_action( 'wp_footer', 'footer_scripts', 21 );
  */
 function save_tutorial(){
 
-	$nombre = $_POST['name'];  
+	$nombre = $_POST['name'];
 	$titulo =  $_POST['title'];
 	$categoria_tutorial =  $_POST['category'];
 	$url_video =  $_POST['video_url'];
@@ -103,10 +103,12 @@ function save_tutorial(){
 	add_post_meta( $post_id, '_url_imagen_meta', $url_imagen );
 	$categoria_tutorial_term = get_term_by( 'name', $categoria_tutorial, 'categoria-tutorial' );
 	wp_set_object_terms( $post_id, array( $categoria_tutorial_term->term_id ), 'categoria-tutorial' );
-	
+
 	$message = array(
 		'error'		=> 0,
-		'message'	=> '¡Tutorial guardado exitosamente!'
+		'message'	=> '¡Tutorial guardado exitosamente!',
+		'permalink' => get_permalink($post_id),
+		'the_title' => get_the_title($post_id)
 	);
 	echo json_encode($message , JSON_FORCE_OBJECT);
 	exit();
