@@ -54,12 +54,10 @@ function footer_scripts(){
 						e.preventDefault();
 						var shareUrl = $(this).data( 'share-url' );
 						shareVideoFB( shareUrl );
-					});	
+					});
 				<?php endif; ?>
 
 				<?php if( is_page( 'exito' ) ) : ?>
-
-					$("#loading").hide();
 
 					$("#forma-exito").submit( function(e){
 						console.log('submitting');

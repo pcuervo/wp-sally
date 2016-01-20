@@ -59,23 +59,5 @@
 		<p class="[ font-title ][ margin-top--small ]">cargando…</p>
 	</div>
 </div>
-<!-- modal-tutorial -->
-<div id="exito-ínfo" class="[ modal fade ]" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="[ modal-title ][ color-primary ]">Por favor confirma la infomación de tu tutorial</h4>
-      </div>
-      <div class="[ modal-body ][ color-primary ]">
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary [ js-confirm-exito-info ]">Confirmar</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 <?php get_footer(); ?>
