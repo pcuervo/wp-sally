@@ -23,7 +23,7 @@
 			</footer>
 		<?php } ?>
 
-		<?php if (is_page('exito') OR is_page('vobo')){ ?>
+		<?php if (is_page('exito') OR is_page('vobo') OR is_singular()){ ?>
 			<footer class="[ text-center ][ width-100 ]">
 				<a class="[ color-light ]" href="#">términos y condiciones</a>
 			</footer>
