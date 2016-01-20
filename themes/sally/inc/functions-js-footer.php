@@ -16,8 +16,8 @@ function footer_scripts(){
 						document.getElementById('grabar').click();
 					});
 					CameraTag.observe('myVideo', 'playbackStarted', function(){
-					 	myCamera = CameraTag.cameras["myVideo"];
-					 	myCamera.stopPlayback();
+					 	//myCamera = CameraTag.cameras["myVideo"];
+					 	//myCamera.stopPlayback();
 					});
 					CameraTag.observe('myVideo', 'published', function(){
 						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
