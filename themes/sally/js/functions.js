@@ -119,6 +119,7 @@ function runIsotope(container, item){
 }// runIsotope
 
 function shareVideoFB( url ){
+    console.log('FBURL'+url);
     FB.ui({
         method: 'share',
         href: url,

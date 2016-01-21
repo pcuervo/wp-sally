@@ -59,6 +59,7 @@ function footer_scripts(){
 						console.log( 'pausing...' );
 						playPause( $('#videoTutorial')[0] );
 						$('.js-video-container video').remove();
+						$('.btn-fb').removeAttr( 'data-share-url');
 					});
 
 					$('.btn-fb').click( function(e){
