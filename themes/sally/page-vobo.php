@@ -32,10 +32,10 @@
 					<div class="[ margin-bottom--large ][ col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4 ]">
 						<p class="[ text-uppercase ]"><strong>Comparte</strong></p>
 						<p>Muchas gracias por tu tip. Ve tu resultado y empieza a contagiar al mundo.</p>
-						<a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);window.location.href=('http://twitter.com/?status='+tit2+'%20'+dir+'');"  target="_blank">
+						<a href="#" class="[ btn-tw ]" data-share-url="" target="_blank">
 							<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 						</a>
-						<a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"  target="_blank">
+						<a href="#" class="[ btn-fb ]">
 							<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg">
 						</a>
 						<hr>

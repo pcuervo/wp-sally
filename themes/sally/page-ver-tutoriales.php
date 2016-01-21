@@ -102,7 +102,7 @@ if ( $paginate_links ) : ?>
 					</div>
 				</div>
 				<div>
-					<a href="#" class="[ btn-twitter ]" data-share-url="">
+					<a href="#" class="[ btn-tw ]">
 						<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 					</a>
 					<a href="#" class="[ btn-fb ]" data-share-url="" >

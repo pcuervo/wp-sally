@@ -1,0 +1,911 @@
+{
+    "scenes": [
+        {
+            "name": [
+                "Composicion01"
+            ],
+            "varinfo": {
+                "entries": [
+                    {
+                        "key": "texto",
+                        "undefinable": true
+                    }
+                ],
+                "maxcombinations": 10
+            },
+            "numframes": 50,
+            "tracks": [
+                {
+                    "content": {
+                        "source": {
+                            "path": "userdata/video01.mov"
+                        },
+                        "type": "video",
+                        "videooffset": 0
+                    },
+                    "lazyevaluate": false,
+                    "name": [
+                        "base"
+                    ]
+                },
+                {
+                    "lazyevaluate": true,
+                    "name": [
+                        "cachebarrier"
+                    ],
+                    "comment": "Caching track that caches inpainting and base tracks"
+                },
+                {
+                    "content": {
+                        "type": "textsimple",
+                        "text": {
+                            "defaultvalue": "lo que sea",
+                            "key": "texto",
+                            "type": "map"
+                        },
+                        "xalignment": "centered",
+                        "source": {
+                            "path": "userdata/FuturaStd-Light.otf"
+                        },
+                        "fontsize_d": 60.0,
+                        "width": 800,
+                        "height": 400,
+                        "overflowresize": true,
+                        "color": {
+                            "red": 255,
+                            "green": 255,
+                            "blue": 255,
+                            "alpha": 255
+                        },
+                        "videooffset": 0,
+                        "linespacing": 1.0,
+                        "yalignment": "middle",
+                        "fontspacing": 10.0,
+                        "fontspacing_function": {
+                            "type": "keyframe",
+                            "keyframes": {
+                                "x": 10.0,
+                                "y": 60.0
+                            }
+                        } 
+                    },
+                    "name": [
+                        "Texto"
+                    ],
+                    "opacity": 1.0,
+                    "numframes": 50,
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "offset": 0,
+                                "source": {
+                                    "path": "appdata/trackdata_video01.mov_Composicion01_00_Texto.json"
+                                },
+                                "type": "file",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "failfast": false
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "offset": 0,
+                    "blendmode": "normal",
+                    "opacityfunction": {
+                        "type": "timed",
+                        "param1": 0.0,
+                        "param2": 0.23976023976023977
+                    }
+                }
+            ],
+            "audio": {}
+        },
+        {
+            "numframes": 48,
+            "tracks": [
+                {
+                    "content": {
+                        "source": {
+                            "path": "userdata/video02.mov"
+                        },
+                        "type": "video",
+                        "videooffset": 0
+                    },
+                    "lazyevaluate": false,
+                    "name": [
+                        "base"
+                    ]
+                },
+                {
+                    "lazyevaluate": true,
+                    "name": [
+                        "cachebarrier"
+                    ],
+                    "comment": "Caching track that caches inpainting and base tracks"
+                },
+                {
+                    "opacity": 1.0,
+                    "offset": 0,
+                    "content": {
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "height": 160,
+                        "type": "textsimple",
+                        "yalignment": "middle",
+                        "width": 840,
+                        "xalignment": "centered",
+                        "color": {
+                            "red": 221,
+                            "alpha": 255,
+                            "green": 1,
+                            "blue": 67
+                        },
+                        "videooffset": 0,
+                        "fontsize_d": 60.0,
+                        "text": {
+                            "type": "map",
+                            "key": "nombre_apellido",
+                            "defaultvalue": "arisbeth"
+                        },
+                        "overflowresize": true,
+                        "fontspacing": 10.0,
+                        "linespacing": 0.0,
+                         "fontspacing_function": {
+                            "type": "keyframe",
+                            "keyframes": {
+                                "x": 10.0,
+                                "y": 50.0
+                            }
+                        } 
+                    },
+                    "opacityfunction": {
+                        "param2": 0.24975024975024976,
+                        "type": "timed",
+                        "param1": 0.0
+                    },
+                    "numframes": 48,
+                    "transformations": [
+                        {
+                            "blurlength": 1.0,
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "source": {
+                                    "path": "appdata/trackdata_video02.mov_Composicion02_00_Nombre.json"
+                                },
+                                "type": "file",
+                                "offset": 0,
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "failfast": false
+                            }
+                        }
+                    ],
+                    "name": [
+                        "Nombre"
+                    ],
+                    "blendmode": "normal"
+                }
+            ],
+            "name": [
+                "Composicion02"
+            ],
+            "varinfo": {
+                "entries": [
+                    {
+                        "key": "nombre_apellido",
+                        "undefinable": true
+                    }
+                ],
+                "maxcombinations": 10
+            },
+            "audio": {}
+        },
+        {
+            "name": [
+                "Composicion03"
+            ],
+            "varinfo": {
+                "maxcombinations": 10
+            },
+            "numframes": 60,
+            "tracks": [
+                {
+                    "content": {
+                        "source": {
+                            "path": "userdata/video03.mov"
+                        },
+                        "type": "video",
+                        "videooffset": 0
+                    },
+                    "lazyevaluate": false,
+                    "name": [
+                        "base"
+                    ]
+                },
+                {
+                    "lazyevaluate": true,
+                    "name": [
+                        "cachebarrier"
+                    ],
+                    "comment": "Caching track that caches inpainting and base tracks"
+                }
+            ],
+            "audio": {}
+        },
+        {
+            "numframes": -1,
+            "tracks": [
+                {
+                    "content": {
+                        "type": "video",
+                        "source": {
+                            "path": "userdata/OSqDnlopJm.mp4"
+                        },
+                        "videooffset": 0
+                    },
+                    "transformations": [
+                        {
+                            "type": "scalingaspect",
+                            "aspectratio": 1.7763157894736843,
+                            "fixedsidesize": 608,
+                            "specifiedside": "h"
+                        }
+                    ],
+                    "lazyevaluate": false,
+                    "name": [
+                        "base"
+                    ]
+                },
+                {
+                    "lazyevaluate": true,
+                    "name": [
+                        "cachebarrier"
+                    ],
+                    "comment": "Caching track that caches inpainting and base tracks"
+                },
+                {
+                    "transformations": [
+                        {
+                            "aspectratio": 1.7763157894736843,
+                            "type": "scalingaspect",
+                            "fixedsidesize": 608,
+                            "specifiedside": "h"
+                        },
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_08_SuperBg.json"
+                                },
+                                "offset": "34",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "video",
+                        "source": {
+                            "path": "userdata/super.zip"
+                        },
+                        "videooffset": 0
+                    },
+                    "offset": "34",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "SuperBg"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_07_Layer 1.json"
+                                },
+                                "offset": "34",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "textsimple",
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "width": 1080,
+                        "linespacing": 0.0,
+                        "text": {
+                            "type": "map",
+                            "key": "super_uno",
+                            "defaultvalue": "uno "
+                        },
+                        "videooffset": 0,
+                        "height": 40,
+                        "color": {
+                            "red": 255,
+                            "green": 255,
+                            "blue": 255,
+                            "alpha": 255
+                        },
+                        "xalignment": "centered",
+                        "yalignment": "middle",
+                        "fontspacing": 0.0,
+                        "fontsize_d": 18.0,
+                        "overflowresize": true
+                    },
+                    "offset": "34",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 1"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_06_Layer 2.json"
+                                },
+                                "offset": "34",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "textsimple",
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "width": 1080,
+                        "linespacing": 0.0,
+                        "text": {
+                            "type": "map",
+                            "key": "producto_uno",
+                            "defaultvalue": ""
+                        },
+                        "videooffset": 0,
+                        "height": 40,
+                        "color": {
+                            "red": 255,
+                            "green": 255,
+                            "blue": 255,
+                            "alpha": 255
+                        },
+                        "xalignment": "centered",
+                        "yalignment": "middle",
+                        "fontspacing": 0.0,
+                        "fontsize_d": 18.0,
+                        "overflowresize": true
+                    },
+                    "offset": "34",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 2"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "aspectratio": 1.7763157894736843,
+                            "type": "scalingaspect",
+                            "fixedsidesize": 608,
+                            "specifiedside": "h"
+                        },
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_05_Layer 3.json"
+                                },
+                                "offset": "68",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "video",
+                        "source": {
+                            "path": "userdata/super.zip"
+                        },
+                        "videooffset": 0
+                    },
+                    "offset": "68",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 3"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_04_Layer 4.json"
+                                },
+                                "offset": "68",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "textsimple",
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "width": 1080,
+                        "linespacing": 0.0,
+                        "text": {
+                            "type": "map",
+                            "key": "super_dos",
+                            "defaultvalue": "dos "
+                        },
+                        "videooffset": 0,
+                        "height": 40,
+                        "color": {
+                            "red": 255,
+                            "green": 255,
+                            "blue": 255,
+                            "alpha": 255
+                        },
+                        "xalignment": "centered",
+                        "yalignment": "middle",
+                        "fontspacing": 0.0,
+                        "fontsize_d": 18.0,
+                        "overflowresize": true
+                    },
+                    "offset": "68",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 4"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_03_Layer 5.json"
+                                },
+                                "offset": "68",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "textsimple",
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "width": 1080,
+                        "linespacing": 0.0,
+                        "text": {
+                            "type": "map",
+                            "key": "producto_dos",
+                            "defaultvalue": ""
+                        },
+                        "videooffset": 0,
+                        "height": 40,
+                        "color": {
+                            "red": 255,
+                            "green": 255,
+                            "blue": 255,
+                            "alpha": 255
+                        },
+                        "xalignment": "centered",
+                        "yalignment": "middle",
+                        "fontspacing": 0.0,
+                        "fontsize_d": 18.0,
+                        "overflowresize": true
+                    },
+                    "offset": "68",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 5"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "aspectratio": 1.7763157894736843,
+                            "type": "scalingaspect",
+                            "fixedsidesize": 608,
+                            "specifiedside": "h"
+                        },
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_02_Layer 6.json"
+                                },
+                                "offset": "102",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "video",
+                        "source": {
+                            "path": "userdata/super.zip"
+                        },
+                        "videooffset": 0
+                    },
+                    "offset": "102",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 6"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_01_Layer 7.json"
+                                },
+                                "offset": "102",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "textsimple",
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "width": 1080,
+                        "linespacing": 0.0,
+                        "text": {
+                            "type": "map",
+                            "key": "super_tres",
+                            "defaultvalue": "tres"
+                        },
+                        "videooffset": 0,
+                        "height": 40,
+                        "color": {
+                            "red": 255,
+                            "green": 255,
+                            "blue": 255,
+                            "alpha": 255
+                        },
+                        "xalignment": "centered",
+                        "yalignment": "middle",
+                        "fontspacing": 0.0,
+                        "fontsize_d": 18.0,
+                        "overflowresize": true
+                    },
+                    "offset": "102",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 7"
+                    ]
+                },
+                {
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "trackdata": {
+                                "failfast": false,
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_tutorial.mp4_Composicion08_00_Layer 8.json"
+                                },
+                                "offset": "102",
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ]
+                            },
+                            "blurlength": 1.0
+                        }
+                    ],
+                    "content": {
+                        "type": "textsimple",
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "width": 1080,
+                        "linespacing": 0.0,
+                        "text": {
+                            "type": "map",
+                            "key": "producto_tres",
+                            "defaultvalue": ""
+                        },
+                        "videooffset": 0,
+                        "height": 40,
+                        "color": {
+                            "red": 255,
+                            "green": 255,
+                            "blue": 255,
+                            "alpha": 255
+                        },
+                        "xalignment": "centered",
+                        "yalignment": "middle",
+                        "fontspacing": 0.0,
+                        "fontsize_d": 18.0,
+                        "overflowresize": true
+                    },
+                    "offset": "102",
+                    "numframes": 93,
+                    "blendmode": "normal",
+                    "opacity": 1.0,
+                    "name": [
+                        "Layer 8"
+                    ]
+                }
+            ],
+            "varinfo": {
+                "entries": [
+                    {
+                        "key": "producto_uno",
+                        "undefinable": true
+                    },
+                    {
+                        "key": "super_uno",
+                        "undefinable": true
+                    }
+                ],
+                "maxcombinations": 10
+            },
+            "audio": {
+                "audiotracks": [
+                    {
+                        "type": "video_mix",
+                        "source": {
+                            "path": "userdata/OSqDnlopJm.mp4"
+                        },
+                        "optional_audio": true,
+                        "name": [
+                            "base"
+                        ]
+                    }
+                ]
+            },
+            "name": [
+                "Composicion07"
+            ]
+        },
+        {
+            "varinfo": {
+                "maxcombinations": 10,
+                "entries": [
+                    {
+                        "key": "nombre",
+                        "undefinable": true
+                    }
+                ]
+            },
+            "numframes": 72,
+            "name": [
+                "Composicion04"
+            ],
+            "tracks": [
+                {
+                    "name": [
+                        "base"
+                    ],
+                    "content": {
+                        "type": "video",
+                        "source": {
+                            "path": "userdata/video04.mov"
+                        },
+                        "videooffset": 0
+                    },
+                    "lazyevaluate": false
+                },
+                {
+                    "lazyevaluate": true,
+                    "name": [
+                        "cachebarrier"
+                    ],
+                    "comment": "Caching track that caches inpainting and base tracks"
+                },
+                {
+                    "name": [
+                        "Nombre"
+                    ],
+                    "transformations": [
+                        {
+                            "type": "quadtracking",
+                            "blurlength": 1.0,
+                            "trackdata": {
+                                "type": "file",
+                                "source": {
+                                    "path": "appdata/trackdata_video04.mov_Composicion04_00_Nombre.json"
+                                },
+                                "offset": 8,
+                                "scale": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "failfast": false
+                            }
+                        }
+                    ],
+                    "content": {
+                        "type": "textsimple",
+                        "source": {
+                            "path": "userdata/FuturaStd-Bold.otf"
+                        },
+                        "color": {
+                            "red": 221,
+                            "blue": 67,
+                            "green": 1,
+                            "alpha": 255
+                        },
+                        "fontsize_d": 60.0,
+                        "text": {
+                            "type": "map",
+                            "defaultvalue": "arisbeth",
+                            "key": "nombre"
+                        },
+                        "width": 840,
+                        "height": 100,
+                        "videooffset": 0,
+                        "xalignment": "centered",
+                        "linespacing": 0.0,
+                        "yalignment": "middle",
+                        "overflowresize": true,
+                        "fontspacing": 10.0,
+                        "fontspacing_function": {
+                            "type": "keyframe",
+                            "keyframes": {
+                                "x": 10.0,
+                                "y": 50.0
+                            }
+                        }
+                    },
+                    "opacityfunction": {
+                        "type": "timed",
+                        "param1": 0.0,
+                        "param2": 0.18731268731268733
+                    },
+                    "numframes": 64,
+                    "offset": 8,
+                    "opacity": 1.0,
+                    "blendmode": "normal"
+                }
+            ],
+            "audio": {}
+        },
+        {
+            "varinfo": {
+                "maxcombinations": 10
+            },
+            "numframes": 96,
+            "name": [
+                "Composicion05"
+            ],
+            "tracks": [
+                {
+                    "name": [
+                        "base"
+                    ],
+                    "content": {
+                        "type": "video",
+                        "source": {
+                            "path": "userdata/video05.mov"
+                        },
+                        "videooffset": 0
+                    },
+                    "lazyevaluate": false
+                },
+                {
+                    "lazyevaluate": true,
+                    "name": [
+                        "cachebarrier"
+                    ],
+                    "comment": "Caching track that caches inpainting and base tracks"
+                }
+            ],
+            "audio": {}
+        }
+    ],
+    "audio": {
+        "audiotracks": [
+            {
+                "volume": 0.2,
+                "type": "video_mix",
+                "usecachedir": false,
+                "source": {
+                    "path": "userdata/loop.mp3"
+                },
+                "numframes": 0,
+                "optional_audio": true
+            }
+        ]
+    },
+    "movie": {
+        "mp4": "OSqDnlopJm",
+        "webm": "OSqDnlopJm"
+    },
+    "params": {
+        "vparams": {
+            "width": 1080,
+            "height": 608,
+            "videorc": "VRC_BITRATE",
+            "videoqp": 16,
+            "videobitrate": 2000,
+            "videocpueffort": 10.0,
+            "videodelayrequirement": "DELAY_REALTIME"
+        },
+        "aparams": {
+            "audiocodec": "AUDIO_AAC"
+        }
+    },
+    "initatstart": false
+}
