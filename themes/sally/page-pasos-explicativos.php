@@ -16,7 +16,7 @@
 					<img class="[ svg icon--stroke icon--responsive ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/maquillaje-.svg">
 				</div>
 				<p class="[ text-uppercase ][ no-margin ]"><strong>Después</strong></p>
-				<p>Platicanos tu tip, los pasos que debemos seguir y las recomendaciones</p>
+				<p>Platícanos tu tip, los pasos que debemos seguir y las recomendaciones</p>
 			</div>
 			<div class="[ col-offset-1 col-sm-4 ][ margin-bottom--large ]">
 				<div class="[ icon-box ][ margin-auto margin-bottom ][ relative ]">

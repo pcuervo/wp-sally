@@ -4,7 +4,7 @@
 	<img class="[ img-responsive img-title ][ margin-bottom--xlarge ]" src="<?php echo THEMEPATH; ?>img/title-2.png">
 	<div class="[ padding-movil ]">
 		<div class="[ margin-bottom ]">
-			<p class="[ fz-large ][ no-margin ]"><strong>¿Te gustaría contagiar al mundo con tu belleza?</strong></p>
+			<p class="[ fz-large ][ no-margin ]"><strong>¿Te gustaría compartir al mundo tu belleza?</strong></p>
 			<p class="">Graba tu tutorial siguiendo las instrucciones y comparte los mejores tips.</p>
 		</div>
 		<div>
