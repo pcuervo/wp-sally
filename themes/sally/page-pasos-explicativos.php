@@ -31,6 +31,6 @@
 	<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary ]">Empezar a grabar</a>
 	<div class="[ margin-bottom--xlarge ][ visible-xs ]"></div>
 </section>
-<div class="[ absolute ]">
+<div class="[ relative top-40 ]">
 	<?php get_footer(); ?>
 </div>
