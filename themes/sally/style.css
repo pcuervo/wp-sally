@@ -9128,19 +9128,9 @@ header span img:not(.nav img) {
   background-image: url('img/home.jpg');
   height: 100vh;
 }
-@media (max-width: 480px) {
-  .bg-home {
-    background-size: 450%;
-    background-position: 30% 70%;
-  }
-}
 @media (max-width: 768px) and (orientation: landscape) {
   .bg-home {
     height: 120vh;
-    background-size: 250%;
-  }
-  .bg-home footer {
-    bottom: -50px !important;
   }
 }
 .bg-opacity-light {

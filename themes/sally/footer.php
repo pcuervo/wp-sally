@@ -6,9 +6,10 @@
 		<!-- /////// -->
 
 		<?php if (is_home()){ ?>
-			<footer class="[ text-center ][ width-100 ][ absolute bottom-10 bottom-ls ]">
-				<a class="[ color-primary ]" href="#">Términos y Condiciones</a>
-			</footer>
+				<footer class="[ text-center ][ width-100 ][ absolute bottom-10 bottom-ls ]">
+					<a class="[ color-primary ]" href="#">Términos y Condiciones</a>
+				</footer>
+			</div>
 		<?php } ?>
 
 		<?php if (is_page('pasos-explicativos') OR is_page('grabando')){ ?>
