@@ -14,15 +14,18 @@
 		</div>
 	</div>
 	<div class="[ text-center ][ margin-top margin-bottom ]">
-		<div class="[ inline-block align-middle ]">
-			<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Volver a grabar</a>
-		</div>
-		<div class="[ clearfix ][ margin-bottom ][ visible-xs ]"></div>
-		<div class="[ inline-block align-middle ]">
-			<div class="[ js-publicar-opener ]">
-				<a class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Publicar</a>
+		<div id="hidden-published">
+			<div class="[ inline-block align-middle ]">
+				<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Volver a grabar</a>
+			</div>
+			<div class="[ clearfix ][ margin-bottom ][ visible-xs ]"></div>
+			<div class="[ inline-block align-middle ]">
+				<div class="[ js-publicar-opener ]">
+					<a class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Publicar</a>
+				</div>
 			</div>
 		</div>
+		
 		<div class="[ js-publicar-container ]">
 			<div class="[ js-publicar-element ][ margin-top ]">
 				<div class="[ ico-small ][ margin-auto margin-bottom ][ relative ]">
@@ -31,6 +34,7 @@
 				<div class="[ row ]">
 					<div class="[ margin-bottom--large ][ col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4 ]">
 						<p class="[ text-uppercase ]"><strong>Comparte</strong></p>
+						<p>Tu video se ha publicado.</p>
 						<p>Muchas gracias por tu tip. Ve tu resultado y empieza a contagiar al mundo.</p>
 						<a href="#" class="[ btn-tw ]" data-share-url="" target="_blank">
 							<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
