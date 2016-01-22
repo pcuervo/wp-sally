@@ -40,9 +40,11 @@
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		$a = curl_exec($ch);
 		
-		if(preg_match('#Location: (.*)#', $a, $r))
-		 	$l = trim($r[1]);
-			curl_close($ch);
+			if(preg_match('#Location: (.*)#', $a, $r)){
+				$l = trim($r[1]);
+				curl_close($ch);
+			}
+		 	
 	    }
 	    
 	    //download video from camera tag service
