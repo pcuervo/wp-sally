@@ -90,6 +90,7 @@
 				curl_setopt($ch, CURLOPT_UPLOAD, true);
 				curl_setopt($ch, CURLOPT_INFILE, $file );
 				curl_setopt($ch, CURLOPT_INFILESIZE, filesize($path . "/sally/videos/$random_string.mp4"));
+
 				$result = curl_exec($ch);
 				fclose($file);
 				$curl_error = curl_error($ch);
@@ -156,15 +157,28 @@
 						
 						//render ok
 						$mp4 = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".mp4";
-						file_put_contents( $path."/sally/render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
+						//file_put_contents( $path."/sally/render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
 
-						$jpg = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".jpg?frame=500";
+						$ch = curl_init($mp4);
+						curl_setopt($ch, CURLOPT_HEADER, 0);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+						curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
+						curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
+						curl_setopt($ch, CURLOPT_TIMEOUT, 500); 
+						$rawdata=curl_exec ($ch);
+						curl_close ($ch);
+						$path = dirname(__DIR__);
+						$fp = fopen($path."/sally/render/videos/".$random_string.'.mp4' ,'w');
+						fwrite($fp, $rawdata); 
+						fclose($fp); 
+
+
+        				$jpg = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".jpg?frame=500";
 						file_put_contents( $path."/sally/render/img/".$random_string.'.jpg' ,  file_get_contents( $jpg  ) );
 
 						$data['success'] = true;
 						$data['video_url']  = $random_string.".mp4";
         				$data['img_url'] = $random_string.".jpg";
-						
 
 					}else{
 
