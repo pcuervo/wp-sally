@@ -157,14 +157,14 @@
 						
 						//render ok
 						$mp4 = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".mp4";
-						//file_put_contents( $path."/sally/render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
+						file_put_contents( $path."/sally/render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
 
 						$ch = curl_init($mp4);
 						curl_setopt($ch, CURLOPT_HEADER, 0);
 						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 						curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
-						curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
-						curl_setopt($ch, CURLOPT_TIMEOUT, 500); 
+
+						curl_setopt($ch, CURLOPT_TIMEOUT, 900); 
 						$rawdata=curl_exec ($ch);
 						curl_close ($ch);
 						$path = dirname(__DIR__);
