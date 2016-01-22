@@ -142,8 +142,11 @@
 					curl_setopt($ch, CURLOPT_USERPWD, $username.':'.$password );
 					curl_setopt($ch, CURLOPT_PUT, true);
 					curl_setopt($ch, CURLOPT_UPLOAD, true);
+					curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
+					curl_setopt($ch, CURLOPT_TIMEOUT, 500); 
 					curl_setopt($ch, CURLOPT_INFILE, $file );
 					curl_setopt($ch, CURLOPT_INFILESIZE, filesize($path . "/sally/json/$random_string.json"));
+
 					
 					$result = curl_exec($ch);
 					fclose($file);
