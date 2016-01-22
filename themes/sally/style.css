@@ -7859,7 +7859,7 @@ button.close {
   float: right;
   left: 190px;
   text-align: right;
-  width: 320px;
+  width: 260px;
   background-color: #f90e42;
   border-radius: 15px 0 0 15px;
 }
@@ -8532,6 +8532,10 @@ button.close {
 }
 .underline {
   text-decoration: underline;
+}
+.no-decoration,
+.no-decoration:hover {
+  text-decoration: none;
 }
 .color-primary {
   color: #f90e42;
