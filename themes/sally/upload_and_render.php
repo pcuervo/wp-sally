@@ -40,9 +40,11 @@
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		$a = curl_exec($ch);
 		
-		if(preg_match('#Location: (.*)#', $a, $r))
-		 	$l = trim($r[1]);
-			curl_close($ch);
+			if(preg_match('#Location: (.*)#', $a, $r)){
+				$l = trim($r[1]);
+				curl_close($ch);
+			}
+		 	
 	    }
 	    
 	    //download video from camera tag service
@@ -88,6 +90,7 @@
 				curl_setopt($ch, CURLOPT_UPLOAD, true);
 				curl_setopt($ch, CURLOPT_INFILE, $file );
 				curl_setopt($ch, CURLOPT_INFILESIZE, filesize($path . "/sally/videos/$random_string.mp4"));
+
 				$result = curl_exec($ch);
 				fclose($file);
 				$curl_error = curl_error($ch);
@@ -140,8 +143,11 @@
 					curl_setopt($ch, CURLOPT_USERPWD, $username.':'.$password );
 					curl_setopt($ch, CURLOPT_PUT, true);
 					curl_setopt($ch, CURLOPT_UPLOAD, true);
+					curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
+					curl_setopt($ch, CURLOPT_TIMEOUT, 500); 
 					curl_setopt($ch, CURLOPT_INFILE, $file );
 					curl_setopt($ch, CURLOPT_INFILESIZE, filesize($path . "/sally/json/$random_string.json"));
+
 					
 					$result = curl_exec($ch);
 					fclose($file);
@@ -153,13 +159,13 @@
 						$mp4 = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".mp4";
 						file_put_contents( $path."/sally/render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
 
-						$jpg = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".jpg?frame=500";
+
+        				$jpg = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".jpg?frame=500";
 						file_put_contents( $path."/sally/render/img/".$random_string.'.jpg' ,  file_get_contents( $jpg  ) );
 
 						$data['success'] = true;
 						$data['video_url']  = $random_string.".mp4";
         				$data['img_url'] = $random_string.".jpg";
-						
 
 					}else{
 

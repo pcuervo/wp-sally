@@ -86,9 +86,17 @@
 .bottom-0 {bottom:0}
 .bottom-10 {bottom:10px}
 .top-10 {top: 10px;}
+.top-40 {top: 40px;}
 
 .left-20 { left: 20px;}
 .left-50 { left: 50%;}
+
+.relative--xs{
+  @media (max-width: @screen-sm){
+    position: relative;
+    top: 40px;
+  }
+}
 
 // Z-index
 .z-index---1{ z-index: -1;}
@@ -108,6 +116,8 @@
 // Text-decoration
 // -------------------------
 .underline { text-decoration: underline;}
+.no-decoration,
+.no-decoration:hover{ text-decoration: none;}
 
 
 // Color

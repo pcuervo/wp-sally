@@ -31,7 +31,7 @@
 		</div>
 	</div>
 	<div id="myVideo-countdown-screen"  class="cameratag_screen cameratag_count">
-		<div class="[ cameratag_ready ][ color-light ][ font-title lead ][ padding-bottom ]">¿Lista?</div>
+		<div class="[ cameratag_ready ][ color-light ][ font-title fz--xxlarge ][ padding-bottom ]">¿Lista?</div>
 		<div class="[ cameratag_countdown_status ][ color-primary ][ font-title ]">1</div>
 	</div>
 	<div id="myVideo-recording-screen" class="[ cameratag_screen cameratag_recording cameratag_stop_recording ]">
@@ -65,5 +65,6 @@
 	</div>
 	<div id="myVideo-completed-screen"  class="cameratag_screen cameratag_completed"></div>
 </div>
-
-<?php get_footer(); ?>
+<div class="[ relative top-40 ]">
+	<?php get_footer(); ?>
+</div>

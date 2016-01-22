@@ -12,13 +12,43 @@
 		<a href="https://www.instagram.com/sallybeautymx/"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/instagram.svg"></a>
 		<a href="https://twitter.com/SallyMexico"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg"></a>
 		<a href="https://www.facebook.com/SallyMexico"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg"></a>
-		<a href="http://www.sallymexico.com/" target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/shopping-bag-1.svg"></a>
+		<a href="http://www.sallymexico.com/" class="[ no-decoration ]" target="_blank">
+			<img class="[ inline-block align-middle ][ margin-left--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/shopping-bag-1.svg">
+			<p class="[ inline-block align-middle ][ no-margin ][ color-light ]">Compra en linea</p>
+		</a>
 	</span>
 	<div class="[ return ]">
-		<a href="<?php echo site_url(); ?>">
-			<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
-			<p class="[ fz-xsmall ]">atrás</p>
-		</a>
+		<?php if ( is_page('grabando') ){ ?>
+			<a href="<?php echo site_url('/pasos-explicativos/'); ?>">
+				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
+				<p class="[ fz-xsmall ]">atrás</p>
+			</a>
+		<?php } ?>
+		<?php if ( is_page('pasos-explicativos') ){ ?>
+			<a href="<?php echo site_url('/'); ?>">
+				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
+				<p class="[ fz-xsmall ]">atrás</p>
+			</a>
+		<?php } ?>
+		<?php if ( is_page('exito') ){ ?>
+			<a href="<?php echo site_url('grabando'); ?>">
+				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
+				<p class="[ fz-xsmall ]">atrás</p>
+			</a>
+		<?php } ?>
+		<!--<?php if ( is_page('vobo') ){ ?>
+			<a href="<?php echo site_url(''); ?>">
+				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
+				<p class="[ fz-xsmall ]">atrás</p>
+			</a>
+		<?php } ?>
+
+		<?php if ( is_page('tutoriales-single') ){ ?>
+			<a href="<?php echo site_url(''); ?>">
+				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
+				<p class="[ fz-xsmall ]">atrás</p>
+			</a>
+		<?php } ?> -->
 	</div>
 
 	<!-- Modal Menú-->
@@ -34,8 +64,10 @@
 					<a href="https://www.instagram.com/sallybeautymx/"  target="_blank"><img class="[ svg icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/instagram.svg"></a>
 					<a href="https://twitter.com/SallyMexico"  target="_blank"><img class="[ svg icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg"></a>
 					<a href="https://www.facebook.com/SallyMexico"  target="_blank"><img class="[ svg icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg"></a>
-					<a href="http://www.sallymexico.com/"  target="_blank"><img class="[ svg icon icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-sides--small ]" src="<?php echo THEMEPATH; ?>icons/shopping-bag-1.svg"></a>
-
+					<a href="http://www.sallymexico.com/" class="[ block ][ text-left ][ margin-top--small ]" target="_blank">
+						<img class="[ inline-block align-middle ][ svg icon icon--iconed--large icon--thickness-3 icon--fill ][ color-light ][ margin-left--small ]" src="<?php echo THEMEPATH; ?>icons/shopping-bag-1.svg">
+						<p class="[ inline-block align-middle ][ no-margin ][ color-light ]">Compra en linea</p>
+					</a>
 				</div>
 			</div>
 		</div>
