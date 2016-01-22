@@ -899,7 +899,7 @@
             "height": 608,
             "videorc": "VRC_BITRATE",
             "videoqp": 16,
-            "videobitrate": 2000,
+            "videobitrate": 300,
             "videocpueffort": 10.0,
             "videodelayrequirement": "DELAY_REALTIME"
         },
