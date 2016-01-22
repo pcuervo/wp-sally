@@ -15,14 +15,6 @@ function footer_scripts(){
 					CameraTag.observe('myVideo', 'initialized', function () {
 						document.getElementById('grabar').click();
 					});
-					CameraTag.observe('myVideo', 'playbackStarted', function(){
-					 	//myCamera = CameraTag.cameras["myVideo"];
-					 	//myCamera.stopPlayback();
-					});
-					
-					CameraTag.observe('myVideo', 'recordingStopped', function(){
-						console.log('this video is counting down!')
-					});
 					CameraTag.observe("myVideo", 'processed', function(){
 						console.log("procesed");
 						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
