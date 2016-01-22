@@ -64,7 +64,7 @@ function footer_scripts(){
 
 					$('.btn-fb').click( function(e){
 						e.preventDefault();
-						var shareUrl = $(this).data( 'share-url' );
+						var shareUrl = $(this).attr('data-share-url');
 						shareVideoFB( shareUrl );
 					});
 				<?php endif; ?>
