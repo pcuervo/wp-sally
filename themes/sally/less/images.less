@@ -30,6 +30,11 @@ header span img:not(.nav img){
 		background-size: 450%;
 		background-position: 30% 70%;
 	}
+	@media (max-width: @screen-sm) and (orientation: landscape){
+		height: 120vh;
+		background-size: 250%;
+		& footer{ bottom: -50px!important;}
+	}
 }
 .bg-opacity-light{
   background-color: rgba(255, 255, 255, 0.7);

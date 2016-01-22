@@ -6,7 +6,7 @@
 		<!-- /////// -->
 
 		<?php if (is_home()){ ?>
-			<footer class="[ text-center ][ width-100 ][ absolute bottom-10 ]">
+			<footer class="[ text-center ][ width-100 ][ absolute bottom-10 bottom-ls ]">
 				<a class="[ color-primary ]" href="#">Términos y Condiciones</a>
 			</footer>
 		<?php } ?>
