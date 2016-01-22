@@ -75,6 +75,8 @@ function publishVideoWP( name, title, category, video_url, img_url ){
                 alert( response.message );
                 return;
             }
+            console.log(response.the_title);
+            console.log(response.permalink);
             $('.btn-fb').attr( 'data-share-url', response.permalink );
             $('.btn-tw').attr( 'href', 'http://twitter.com/home?status=Sally Beauty - '+ response.the_title +' - '+response.permalink );
             $('.js-video-container').hide();
@@ -117,6 +119,7 @@ function runIsotope(container, item){
 }// runIsotope
 
 function shareVideoFB( url ){
+    console.log('FBURL'+url);
     FB.ui({
         method: 'share',
         href: url,

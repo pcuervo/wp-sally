@@ -8497,6 +8497,11 @@ button.close {
 .bottom-10 {
   bottom: 10px;
 }
+@media (max-width: 768px) and (orientation: landscape) {
+  .bottom-ls {
+    bottom: -40px;
+  }
+}
 .top-10 {
   top: 10px;
 }
@@ -9123,10 +9128,9 @@ header span img:not(.nav img) {
   background-image: url('img/home.jpg');
   height: 100vh;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) and (orientation: landscape) {
   .bg-home {
-    background-size: 450%;
-    background-position: 30% 70%;
+    height: 120vh;
   }
 }
 .bg-opacity-light {

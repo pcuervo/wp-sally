@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 <div class="[ bg-primary ]">
-	<camera class="camera_tag" id='myVideo' data-app-id='a-2ff6f020-9856-0133-e782-22000bb743dd' data-maxlength='180' data-autopreview='false' data-poll-for-processed='true' data-cssurl='<?php echo THEMEPATH;?>camera-no-style.css'></camera>
+	<camera class="camera_tag" id='myVideo' data-app-id='a-2ff6f020-9856-0133-e782-22000bb743dd' data-maxlength='180'  data-poll-for-processed='true' data-cssurl='<?php echo THEMEPATH;?>camera-no-style.css'></camera>
 	<div id="myVideo-start-screen" class="cameratag_screen [ visible-xs ]">
 		<a id="grabar" class="cameratag_record [ color-light ][ center-full ]">
 			<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
