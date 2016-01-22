@@ -30,13 +30,13 @@
 				<p class="[ fz-xsmall ]">atrás</p>
 			</a>
 		<?php } ?>
-		<!--<?php if ( is_page('exito') ){ ?>
+		<?php if ( is_page('exito') ){ ?>
 			<a href="<?php echo site_url('grabando'); ?>">
 				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
 				<p class="[ fz-xsmall ]">atrás</p>
 			</a>
 		<?php } ?>
-		<?php if ( is_page('vobo') ){ ?>
+		<!--<?php if ( is_page('vobo') ){ ?>
 			<a href="<?php echo site_url(''); ?>">
 				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
 				<p class="[ fz-xsmall ]">atrás</p>
