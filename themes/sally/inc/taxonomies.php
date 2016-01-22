@@ -41,7 +41,7 @@ function custom_taxonomies_callback(){
  * @param string $taxonomy
  */
 function insert_tutoriales_taxonomy_terms(){
-	$caracteristicas = array( 'Ojos', 'Cabello', 'Uñas', 'Labios' );
+	$caracteristicas = array( 'Maquillaje', 'Cabello', 'Uñas', 'Cuidado de la piel' );
 	foreach ( $caracteristicas as $car ) {
 		$term = term_exists( $car, 'categoria-tutorial' );
 		if ( FALSE !== $term && NULL !== $term ) continue;
