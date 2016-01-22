@@ -65,5 +65,6 @@
 	</div>
 	<div id="myVideo-completed-screen"  class="cameratag_screen cameratag_completed"></div>
 </div>
-
-<?php get_footer(); ?>
+<div class="[ relative ]">
+	<?php get_footer(); ?>
+</div>
