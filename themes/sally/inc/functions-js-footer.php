@@ -15,8 +15,13 @@ function footer_scripts(){
 					CameraTag.observe('myVideo', 'initialized', function () {
 						document.getElementById('grabar').click();
 					});
+					CameraTag.observe('myVideo', 'publishing', function () {
+						console.log('publishing');
+						$("#loading").show();
+					});
 					CameraTag.observe("myVideo", 'processed', function(){
 						console.log("procesed");
+						$("#loading").hide();
 						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
 						var uuid = document.getElementById("myVideo_video_uuid").value;
 						localStorage.setItem("uuid", uuid);
