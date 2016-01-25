@@ -156,8 +156,11 @@
 					if( empty( $curl_error ) ){
 						
 						//render ok
+						ini_set('default_socket_timeout', 900);
 						$mp4 = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".mp4";
 						file_put_contents( $path."/sally/render/videos/".$random_string.'.mp4' ,  file_get_contents( $mp4  ) );
+
+
 
 
         				$jpg = "http://api.impossible.io/v1/render/".$DISTRIBUTION_ID."/".$random_string.".jpg?frame=500";
