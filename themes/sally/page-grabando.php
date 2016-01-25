@@ -65,6 +65,12 @@
 	</div>
 	<div id="myVideo-completed-screen"  class="cameratag_screen cameratag_completed"></div>
 </div>
+<div class="[ bg-loader ]" id="loading">
+	<div class="[ center-full ][ text-center ]">
+		<img src="<?php echo THEMEPATH; ?>icons/loader-.gif" >
+		<p class="[ font-title ][ margin-top--small ]">cargando…</p>
+	</div>
+</div>
 <div class="[ relative top-40 ]">
 	<?php get_footer(); ?>
 </div>

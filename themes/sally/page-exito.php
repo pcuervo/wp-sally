@@ -57,6 +57,7 @@
 	<div class="[ center-full ][ text-center ]">
 		<img src="<?php echo THEMEPATH; ?>icons/loader-.gif" >
 		<p class="[ font-title ][ margin-top--small ]">cargando…</p>
+		<p class="[ font-title ][ margin-top--small ]">Estamos procesando tu video, este proceso puede tardar hasta 5 minutos.</p>
 	</div>
 </div>
 
