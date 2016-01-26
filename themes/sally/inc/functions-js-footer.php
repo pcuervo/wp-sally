@@ -15,6 +15,13 @@ function footer_scripts(){
 					CameraTag.observe('myVideo', 'initialized', function () {
 						//document.getElementById('grabar').click();
 					});
+					CameraTag.observe('myVideo', 'uploadStarted', function () {
+						$("#loading").show();
+						console.log('started');
+					});
+					CameraTag.observe('myVideo', 'uploadProgress', function () {
+						$("#loading").show();
+					});
 					CameraTag.observe('myVideo', 'publishing', function () {
 						console.log('publishing');
 						$("#loading").show();
