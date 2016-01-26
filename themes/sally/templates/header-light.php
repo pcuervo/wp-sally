@@ -18,12 +18,6 @@
 		</a>
 	</span>
 	<div class="[ return ]">
-		<?php if ( is_page('grabando') ){ ?>
-			<a href="<?php echo site_url('/pasos-explicativos/'); ?>">
-				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">
-				<p class="[ fz-xsmall ]">atrás</p>
-			</a>
-		<?php } ?>
 		<?php if ( is_page('pasos-explicativos') ){ ?>
 			<a href="<?php echo site_url('/'); ?>">
 				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]"  src="<?php echo THEMEPATH; ?>icons/atras.svg">

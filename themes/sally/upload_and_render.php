@@ -120,9 +120,13 @@
 
 					$framerate_super3 = round($frame_rate_super_3);
 
-					
+					$context = stream_context_create(array('http'=>
+					    array(
+					        'timeout' => 900,  //1200 Seconds is 20 Minutes
+					    )
+					));
 					//render with json
-					$template = file_get_contents( $path.'/sally/template.json' );
+					$template = file_get_contents( $path.'/sally/template.json', false, $context );
 					$search = array("__uuid__", "__name__", "__title__", "__frase1_field__", "__frase2_field__", "__frase3_field__","__framerate_super1__", "__framerate_super2__", "__framerate_super3__");
 					$replace = array($random_string, $name, $title, $frase1_field, $frase2_field, $frase3_field, $framerate_super1, $framerate_super2, $framerate_super3);
 					$template = str_replace($search, $replace , $template);

@@ -1,7 +1,7 @@
 <!--Language Strings Camera Tag-->
 
 <?php get_header(); ?>
-<div class="[ bg-primary ]">
+<div class="[ bg-primary ][ margin-top--large ]">
 	<camera class="camera_tag" id='myVideo' data-app-id='a-2ff6f020-9856-0133-e782-22000bb743dd' data-maxlength='180' data-autopreview='false' data-poll-for-processed='true' data-cssurl='<?php echo THEMEPATH;?>camera-no-style.css'></camera>
 	<div id="myVideo-start-screen" class="cameratag_screen [ visible-xs ]">
 		<a id="grabar" class="cameratag_record [ color-light ][ center-full ]">
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="myVideo-accept-screen"  class="cameratag_screen cameratag_accept">
+	<div id="myVideo-accept-screen"  class="cameratag_screen cameratag_accept" style="background-color: #f90e42;">
 		<div class="[ center-full ][ width-100 ]">
 			<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
 			<a class="[ cameratag_accept_btn cameratag_publish ][ btn btn-primary btn--auto ]">Continuar</a>
