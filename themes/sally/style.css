@@ -8547,6 +8547,9 @@ button.close {
 .align-bottom {
   vertical-align: bottom;
 }
+.align-inherit {
+  vertical-align: inherit;
+}
 .underline {
   text-decoration: underline;
 }
