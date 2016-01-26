@@ -13,7 +13,7 @@
 			<a id="grabar" class="[ cameratag_record ]">
 				<div class="[ btn btn-primary btn-auto ][ margin-bottom margin-sides--small ]">Estoy lista</div>
 			</a>
-			<a id="myVideo_upload_link" class="[ cameratag_primary_link cameratag_upload_link cameratag_upload ][ inline align-inherit ]" >
+			<a id="myVideo_upload_link" class="[ cameratag_primary_link cameratag_upload_link cameratag_upload ][ inline align-inherit ][ hidden-xs ]" >
 				<div class="[ btn btn-primary btn-auto ][ margin-bottom ]">Subir un archivo</div>
 			</a>
 		</div>
