@@ -70,15 +70,14 @@ function publishVideoWP( name, title, category, video_url, img_url ){
             action:     'save_tutorial'
         },
         function( response ){
-            console.log( response );
-            if( parseInt( response.error ) ){
-                alert( response.message );
+            var jsonResponse = $.parseJSON( response );
+            if( parseInt( jsonResponse.error ) ){
+                alert( jsonResponse.message );
                 return;
             }
-            console.log(response.the_title);
-            console.log(response.permalink);
-            $('.btn-fb').attr( 'data-share-url', response.permalink );
-            $('.btn-tw').attr( 'href', 'http://twitter.com/home?status=Sally Beauty - '+ response.the_title +' - '+response.permalink );
+            var shareURL = jsonResponse.permalink.replace('http', 'https');
+            $('.btn-fb').attr( 'data-share-url', shareURL );
+            $('.btn-tw').attr( 'href', 'http://twitter.com/home?status=Sally Beauty - '+ jsonResponse.the_title +' - '+jsonResponse.permalink );
             $('.js-video-container').hide();
             $('.js-publicar-element').show();
         }
@@ -127,3 +126,16 @@ function shareVideoFB( url ){
         console.log( response );
     });
 }
+
+function elapsedTimeMinutes() {
+    var elapsedTime = $('.cameratag_record_timer_prompt').text().replace('(', '').replace(')', '');
+    var minutes = elapsedTime / 60;
+    var seconds = pad( elapsedTime % 60, 2, 0 );
+    $('.js-record-time-min').text( ' ' + Math.floor( minutes ) + ':' + seconds );
+}
+
+function pad ( str, max, padChar ) {
+    str = str.toString();
+    return str.length < max ? pad( padChar + str, max ) : str;
+}
+

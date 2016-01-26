@@ -3,7 +3,8 @@
 <?php get_header(); ?>
 <div class="[ bg-primary ][ margin-top--large ]">
 	<camera class="camera_tag" id='myVideo' data-app-id='a-2ff6f020-9856-0133-e782-22000bb743dd' data-maxlength='180' data-autopreview='false' data-poll-for-processed='true' data-cssurl='<?php echo THEMEPATH;?>camera-no-style.css'></camera>
-	<div id="myVideo-start-screen" class="cameratag_screen [ visible-xs ]">
+
+	<div id="myVideo-start-screen" class="[ cameratag_screen ]">
 		<a id="grabar" class="cameratag_record [ color-light ][ center-full ]">
 			<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
 			<img class="[ svg icon icon--iconed icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/webcam.svg">
@@ -11,6 +12,7 @@
 			<p>¿Estás lista para contarnos tu tip?</p>
 			<div class="[ btn btn-primary btn-auto ]">Estoy lista</div>
 		</a>
+		<a id="myVideo_upload_link" class="[ cameratag_primary_link cameratag_upload_link cameratag_upload ][ btn btn-primary btn-auto ]" style="z-index: 1;">subir un archivo</a>
 	</div>
 	<div id="myVideo-error-screen"  class="cameratag_screen cameratag_error">
 		<div class="cameratag_error_message">
@@ -39,7 +41,7 @@
 			<div class="[ row ]">
 				<div class="[ cameratag_screen__info ][ margin-bottom--small ][ col-xs-12 col-sm-2 col-sm-offset-4 ]">
 					<p class="[ text-uppercase ][ no-margin ]"><strong>Grabando</strong></p>
-					<img src="//www.cameratag.com/assets/recording.gif"> <span class="[ cameratag_record_timer_prompt ]">180</span> seg.
+					<img src="//www.cameratag.com/assets/recording.gif"><span class="[ cameratag_record_timer_prompt ]">180</span><span class="[ js-record-time-min ]"></span>
 				</div>
 				<div class="[ cameratag_screen__info_stop ][ margin-bottom--small ][ col-xs-12 col-sm-2 ]">
 					<p class="[ text-uppercase ][ no-margin ]"><strong>stop</strong></p>

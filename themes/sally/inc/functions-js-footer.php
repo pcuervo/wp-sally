@@ -13,7 +13,7 @@ function footer_scripts(){
 				<?php if( is_page( 'grabando' ) ): ?>
 
 					CameraTag.observe('myVideo', 'initialized', function () {
-						document.getElementById('grabar').click();
+						//document.getElementById('grabar').click();
 					});
 					CameraTag.observe('myVideo', 'publishing', function () {
 						console.log('publishing');
@@ -28,6 +28,11 @@ function footer_scripts(){
 						window.location.href = site_url + '/exito';
 					});
 
+					var elapsedTime = $('.cameratag_record_timer_prompt').text();
+					$('.js-record-time-min').text( elapsedTime / 60 );
+
+					$('.cameratag_record_timer_prompt').hide();
+					setInterval(elapsedTimeMinutes, 1000);
 				<?php endif ?>
 
 				<?php if ( is_page( 'ver-tutoriales' ) ) : ?>
@@ -40,7 +45,7 @@ function footer_scripts(){
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
 						var shareUrl =  $(this).find('.js-url-share').text();
-						console.log(shareUrl);
+						shareUrl = shareUrl.replace( 'http', 'https' );
 						$('.btn-fb').attr( 'data-share-url', shareUrl );
 						$('.btn-tw').attr( 'href', 'http://twitter.com/home?status=Sally Beauty - '+video_title+' - '+shareUrl );
 						playPause( $('#videoTutorial')[0] );
@@ -57,6 +62,7 @@ function footer_scripts(){
 					$('.btn-fb').click( function(e){
 						e.preventDefault();
 						var shareUrl = $(this).attr('data-share-url');
+						console.log( shareUrl );
 						shareVideoFB( shareUrl );
 					});
 				<?php endif; ?>
@@ -76,9 +82,11 @@ function footer_scripts(){
 							'frase3_field' : $("#frase3_field").val(),
 							'frase1_category' :  $("#frase1_category").val(),
 						};
+						var uploadUrl = theme_url.replace( 'tutorialessally.com', 'upload.tutorialessally.com' );
+						console.log( uploadUrl );
 						$.ajax({
 							type: 'POST',
-							url:  theme_url + 'upload_and_render.php',
+							url:  uploadUrl + 'upload_and_render.php',
 							data: formData,
 							dataType: 'json',
 							encode : true,
