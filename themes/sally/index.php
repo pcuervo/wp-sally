@@ -8,7 +8,7 @@
 			<p class="">Graba tu tutorial siguiendo las instrucciones y comparte los mejores tips.</p>
 		</div>
 		<div>
-			<a href="<?php echo site_url( 'pasos-explicativos' ) ?>" class="[ btn btn-secondary btn-movil no-border ][ margin-sides   ]"><strong>Graba tutorial</strong></a>
+			<a href="<?php echo site_url( 'pasos-explicativos' ) ?>" class="[ btn btn-secondary btn-movil no-border ][ margin-sides   ]"><strong>Graba tu tutorial</strong></a>
 			<div class="[ margin-bottom ][ visible-xs ]"></div>
 			<a href="<?php echo site_url( 'ver-tutoriales' ) ?>" class="[ btn btn-secondary btn-movil no-border ][ margin-sides ]"><strong>Tutoriales</strong></a>
 		</div>
