@@ -14,7 +14,7 @@
 			</a> -->
 		</span>
 		<span class="[ visible-xs ][ pull-right ]">
-			<a type="button" data-toggle="modal" data-target="#modal-nav">
+			<a data-toggle="modal" data-target="#modal-nav">
 				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-primary ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg">
 			</a>
 		</span>
