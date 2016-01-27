@@ -17,21 +17,17 @@ function footer_scripts(){
 					});
 					CameraTag.observe('myVideo', 'uploadStarted', function () {
 						$("#loading").show();
-						console.log('started');
 					});
 					CameraTag.observe('myVideo', 'uploadProgress', function () {
 						$("#loading").show();
 					});
 					CameraTag.observe('myVideo', 'readyToPublish', function () {
-						console.log('readyToPublish');
 						$("#loading").hide();
 					});
 					CameraTag.observe('myVideo', 'published', function () {
-						console.log('published');
 						$("#loading").hide();
 					});
 					CameraTag.observe("myVideo", 'processed', function(){
-						console.log("procesed");
 						$("#loading").hide();
 						var api_key = "Vw-bKoSv7bjYq-ekXhzL";
 						var uuid = document.getElementById("myVideo_video_uuid").value;
