@@ -5,11 +5,11 @@
 	<camera class="camera_tag" id='myVideo' data-app-id='a-2ff6f020-9856-0133-e782-22000bb743dd' data-maxlength='180' data-autopreview='false' data-poll-for-processed='true' data-cssurl='<?php echo THEMEPATH;?>camera-no-style.css'></camera>
 
 	<div id="myVideo-start-screen" class="[ cameratag_screen ]">
-		<div class="[ color-light ][ center-full ]"><!--  -->
-				<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
-				<img class="[ svg icon icon--iconed icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/webcam.svg">
-				<p class="[ text-uppercase ][ no-margin ]"><strong>Comencemos</strong></p>
-				<p>¿Estás lista para contarnos tu tip?</p>
+		<div class="[ color-light ][ center-full ]">
+			<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
+			<img class="[ svg icon icon--iconed icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/webcam.svg">
+			<p class="[ text-uppercase ][ no-margin ]"><strong>Comencemos</strong></p>
+			<p>¿Estás lista para contarnos tu tip?</p>
 			<a id="grabar" class="[ cameratag_record ]">
 				<div class="[ btn btn-primary btn-auto ][ margin-bottom margin-sides--small ]">Estoy lista</div>
 			</a>
@@ -17,7 +17,6 @@
 				<div class="[ btn btn-primary btn-auto ][ margin-bottom ]">Subir un archivo</div>
 			</a>
 		</div>
-
 	</div>
 	<div id="myVideo-error-screen"  class="cameratag_screen cameratag_error">
 		<div class="cameratag_error_message">

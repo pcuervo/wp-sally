@@ -22,9 +22,13 @@ function footer_scripts(){
 					CameraTag.observe('myVideo', 'uploadProgress', function () {
 						$("#loading").show();
 					});
-					CameraTag.observe('myVideo', 'publishing', function () {
-						console.log('publishing');
-						$("#loading").show();
+					CameraTag.observe('myVideo', 'readyToPublish', function () {
+						console.log('readyToPublish');
+						$("#loading").hide();
+					});
+					CameraTag.observe('myVideo', 'published', function () {
+						console.log('published');
+						$("#loading").hide();
 					});
 					CameraTag.observe("myVideo", 'processed', function(){
 						console.log("procesed");
