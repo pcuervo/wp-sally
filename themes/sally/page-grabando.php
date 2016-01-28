@@ -69,7 +69,13 @@
 			<span class="cameratag_wait_message [ color-light ][ font-title ]">Conectando...</span>
 		</div>
 	</div>
-	<div id="myVideo-completed-screen"  class="cameratag_screen cameratag_completed"></div>
+	<div id="myVideo-completed-screen"  class="cameratag_screen cameratag_completed">
+		<div class="cameratag_spinner">
+			<img src="<?php echo THEMEPATH; ?>icons/loader-.gif" class="[ margin-bottom ]">
+			<br>
+			<span class="cameratag_wait_message [ color-light ][ font-title ]">Conectando...</span>
+		</div>
+	</div>
 </div>
 <div class="[ bg-loader ]" id="loading">
 	<div class="[ center-full ][ text-center ]">

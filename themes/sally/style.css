@@ -6299,7 +6299,8 @@ button.list-group-item-danger.active:focus {
 .camera_tag .cameratag_screen.cameratag_wait {
   background: #f90e42;
 }
-.camera_tag .cameratag_screen.cameratag_wait .cameratag_spinner {
+.camera_tag .cameratag_screen.cameratag_wait .cameratag_spinner,
+.camera_tag .cameratag_screen.cameratag_completed .cameratag_spinner {
   position: absolute;
   top: 50%;
   margin-top: -50px;
@@ -6307,7 +6308,8 @@ button.list-group-item-danger.active:focus {
   left: 0px;
   right: 0px;
 }
-.camera_tag .cameratag_screen.cameratag_wait .cameratag_spinner img {
+.camera_tag .cameratag_screen.cameratag_wait .cameratag_spinner img,
+.camera_tag .cameratag_screen.cameratag_completed .cameratag_spinner img {
   width: 40px;
 }
 .camera_tag .cameratag_screen.cameratag_completed {
