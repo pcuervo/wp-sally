@@ -66,21 +66,21 @@
 		<div class="cameratag_spinner">
 			<img src="<?php echo THEMEPATH; ?>icons/loader-.gif" class="[ margin-bottom ]">
 			<br>
-			<span class="cameratag_wait_message [ color-light ][ font-title ]">Conectando...</span>
+			<span class="cameratag_wait_message [ color-light ][ font-title ]">Conectando…</span>
 		</div>
 	</div>
 	<div id="myVideo-completed-screen"  class="cameratag_screen cameratag_completed">
 		<div class="cameratag_spinner">
 			<img src="<?php echo THEMEPATH; ?>icons/loader-.gif" class="[ margin-bottom ]">
 			<br>
-			<span class="cameratag_wait_message [ color-light ][ font-title ]">Conectando...</span>
+			<span class="cameratag_wait_message [ color-light ][ font-title ]">Estamos guardando tu video, este proceso puede tardar hasta 5 minutos…</span>
 		</div>
 	</div>
 </div>
 <div class="[ bg-loader ]" id="loading">
 	<div class="[ center-full ][ text-center ]">
 		<img src="<?php echo THEMEPATH; ?>icons/loader-.gif" >
-		<p class="[ font-title ][ margin-top--small ]">Estamos guardando tu video, este proceso puede tardar hasta 5 minutos...</p>
+		<p class="[ font-title ][ margin-top--small ]">Estamos guardando tu video, este proceso puede tardar hasta 5 minutos…</p>
 	</div>
 </div>
 <div class="[ relative top-40 ]">
