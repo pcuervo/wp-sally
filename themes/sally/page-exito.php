@@ -8,8 +8,9 @@
 				<div class="[ ico-small ][ margin-auto margin-bottom ]">
 					<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>img/maquillaje.png">
 				</div>
-				<p class="[ text-uppercase ]"><strong>¡Listo!</strong></p>
 				<p>Casi acabamos, sólo llena el siguiente formulario para ver el resultado.</p>
+				<p>Al subir tu tutorial, no podrás editarlo, pero si rehacerlo.</p>
+				<p class="[ text-uppercase ]"><strong>¿Lista?</strong></p>
 			</div>
 		</div>
 	</div>
@@ -19,7 +20,7 @@
 			<input type="text" name="name" id="name_field" class="[ form-control input-ph-light ][ margin-bottom ]" required data-parsley-error-message="Por favor ingresa máximo 80 caracteres." data-parsley-maxlength="80" maxlength="80" placeholder="Diana Rodriguez">
 			<label for="titulo-del-tutorial" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Título del tutorial</label>
 			<input type="text" name="title" id="title_field" class="[ form-control input-ph-light ][ margin-bottom ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria." data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120" maxlength="120" placeholder="El cat eye perfecto">
-			<label for="resumen-1" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Resume tu tutorial en tres frases:</label>
+			<label for="resumen-1" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Escribe 3 frases que describen tu tutorial:</label>
 			<div class="[ row ][ margin-bottom--small ]">
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
