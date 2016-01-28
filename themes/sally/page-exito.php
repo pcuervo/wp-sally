@@ -16,15 +16,15 @@
 	<div class="[ form-tutorial ][ col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ][ color-light ][ margin-bottom--large ]">
 		<form id="forma-exito" data-parsley-validate>
 			<label for="nombre" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Nombre</label>
-			<input type="text" name="name" id="name_field" class="[ form-control ][ margin-bottom ]" required data-parsley-error-message="Por favor ingresa máximo 80 caracteres." data-parsley-maxlength="80" maxlength="80">
+			<input type="text" name="name" id="name_field" class="[ form-control input-ph-light ][ margin-bottom ]" required data-parsley-error-message="Por favor ingresa máximo 80 caracteres." data-parsley-maxlength="80" maxlength="80" placeholder="Diana Rodriguez">
 			<label for="titulo-del-tutorial" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Título del tutorial</label>
-			<input type="text" name="title" id="title_field" class="[ form-control ][ margin-bottom ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria." data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120" maxlength="120">
+			<input type="text" name="title" id="title_field" class="[ form-control input-ph-light ][ margin-bottom ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria." data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120" maxlength="120" placeholder="El cat eye perfecto">
 			<label for="resumen-1" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Resume tu tutorial en tres frases:</label>
 			<div class="[ row ][ margin-bottom--small ]">
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">1</span>
-						<input type="text"  name="frase1" id="frase1_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120">
+						<input type="text"  name="frase1" id="frase1_field" class="[ form-control input-ph-light ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120" placeholder="Limpia tu cara antes de comenzar">
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">2</span>
-						<input type="text"  name="frase2" id="frase2_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120">
+						<input type="text"  name="frase2" id="frase2_field" class="[ form-control input-ph-light ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120" placeholder="Aplica el maquillaje uniformemente con una brocha" >
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 				<div class="[ col-xs-12 ]">
 					<div class="[ input-group ][ margin-bottom--xsmall ]">
 						<span class="[ input-group-addon ]">3</span>
-						<input type="text" name="frase3" id="frase3_field" class="[ form-control ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120">
+						<input type="text" name="frase3" id="frase3_field" class="[ form-control input-ph-light ]"  required="" data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120" placeholder="Utiliza brochas de buena calidad">
 					</div>
 				</div>
 			</div>
