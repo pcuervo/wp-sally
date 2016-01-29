@@ -143,6 +143,13 @@ function footer_scripts(){
 					});
 				<?php endif; ?>
 
+				<?php if( is_home() ) : ?>
+					console.log('home');
+					$('#lol').on('click', function(){
+						console.log('click');
+					})
+				<?php endif; ?>
+
 				window.fbAsyncInit = function() {
 					FB.init({
 						appId  	: '1107163669301864',

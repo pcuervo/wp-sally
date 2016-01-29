@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="[ container ][ text-center ][ center-full margin--landscape ]">
-	<img class="[ img-responsive img-title ][ margin-bottom--xlarge ]" src="<?php echo THEMEPATH; ?>img/title-2.png">
+	<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-2.png">
 	<div class="[ padding-movil ]">
 		<div class="[ margin-bottom ]">
 			<p class="[ fz-large ][ no-margin ]"><strong>¿Te gustaría compartir al mundo tu belleza?</strong></p>

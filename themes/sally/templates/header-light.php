@@ -3,7 +3,7 @@
 		<img class="[ logo ]" src="<?php echo THEMEPATH; ?>img/logo.png">
 	</a>
 	<span class="[ visible-xs ][ pull-right ]">
-		<a data-toggle="modal" data-target="#modal-nav">
+		<a href="#" data-toggle="modal" data-target="#modal-nav">
 			<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg">
 		</a>
 	</span>

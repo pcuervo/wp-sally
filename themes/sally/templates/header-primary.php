@@ -1,4 +1,3 @@
-
 	<header class="[ container ]">
 		<a href="<?php echo site_url(); ?>">
 			<img class="[ logo ]" src="<?php echo THEMEPATH; ?>img/logo1.png">
@@ -14,7 +13,7 @@
 			</a> -->
 		</span>
 		<span class="[ visible-xs ][ pull-right ]">
-			<a data-toggle="modal" data-target="#modal-nav">
+			<a href="#" data-toggle="modal" data-target="#modal-nav">
 				<img class="[ svg icon--stroke icon--iconed icon--thickness-3 ][ color-primary ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg">
 			</a>
 		</span>

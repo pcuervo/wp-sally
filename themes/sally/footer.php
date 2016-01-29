@@ -6,10 +6,9 @@
 		<!-- /////// -->
 
 		<?php if (is_home()){ ?>
-				<footer class="[ text-center ][ width-100 ][ absolute bottom-10 bottom-ls ]">
-					<a class="[ color-primary ]" href="<?php echo THEMEPATH; ?>pdf/terminos_y_condiciones.pdf" target="_blank">Términos y Condiciones</a>
-				</footer>
-			</div>
+			<footer class="[ text-center ][ width-100 ][ absolute bottom-10 bottom-ls ]">
+				<a class="[ color-primary ]" href="<?php echo THEMEPATH; ?>pdf/terminos_y_condiciones.pdf" target="_blank">Términos y Condiciones</a>
+			</footer>
 		<?php } ?>
 
 		<?php if (is_page('pasos-explicativos') OR is_page('grabando')){ ?>
