@@ -47,7 +47,7 @@
 			</div>
 			<?php show_select_categorias_tutoriales(); ?>
 			<div class="[ col-xs-12 ][ margin-bottom--xlarge ][ text-center ]">
-				<input type="submit" value="Continuar" class="[ btn btn-primary ]">
+				<input type="submit" value="Continuar" class="[ btn btn-primary ]" onClick="ga('send', 'event', 'GrabacionExitosa', 'clic', 'FormularioContinuar');">
 			</div>
 		</form>
 	</div>

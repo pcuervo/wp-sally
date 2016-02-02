@@ -57,9 +57,9 @@
 	<div id="myVideo-accept-screen"  class="cameratag_screen cameratag_accept" style="background-color: #f90e42;">
 		<div class="[ center-full ][ width-100 ]">
 			<img class="[ img-responsive img-title ]" src="<?php echo THEMEPATH; ?>img/title-1.png">
-			<a class="[ cameratag_accept_btn cameratag_publish ][ btn btn-primary btn--auto ]">Continuar</a>
-			<a class="[ cameratag_play_btn cameratag_play ][ btn btn-primary btn--auto ]">Ver Video</a>
-			<a class="[ cameratag_rerecord_btn cameratag_record ][ btn btn-primary btn--auto ]">Volver a Grabar</a>
+			<a class="[ cameratag_accept_btn cameratag_publish ][ btn btn-primary btn--auto ]" onClick="ga('send', 'event', 'GrabaTutorial', 'clic', 'Continuar');">Continuar</a>
+			<a class="[ cameratag_play_btn cameratag_play ][ btn btn-primary btn--auto ]" onClick="ga('send', 'event', 'GrabaTutorial', 'clic', 'VerVideo');">Ver Video</a>
+			<a class="[ cameratag_rerecord_btn cameratag_record ][ btn btn-primary btn--auto ]" onClick="ga('send', 'event', 'GrabaTutorial', 'clic', 'VolveraGrabar');">Volver a Grabar</a>
 		</div>
 	</div>
 	<div id="myVideo-wait-screen"  class="cameratag_screen cameratag_wait">

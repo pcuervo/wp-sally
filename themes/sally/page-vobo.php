@@ -16,12 +16,12 @@
 	<div class="[ text-center ][ margin-top margin-bottom ]">
 		<div id="hidden-published">
 			<div class="[ inline-block align-middle ]">
-				<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Volver a grabar</a>
+				<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary btn--auto ][ margin-sides--small ]" onClick="ga('send', 'event', 'GrabacionExitosa', 'clic', 'VolveraGrabar');">Volver a grabar</a>
 			</div>
 			<div class="[ clearfix ][ margin-bottom ][ visible-xs ]"></div>
 			<div class="[ inline-block align-middle ]">
 				<div class="[ js-publicar-opener ]">
-					<a class="[ btn btn-primary btn--auto ][ margin-sides--small ]">Publicar</a>
+					<a class="[ btn btn-primary btn--auto ][ margin-sides--small ]" onClick="ga('send', 'event', 'GrabacionExitosa', 'clic', 'Publicar');">Publicar</a>
 				</div>
 			</div>
 		</div>

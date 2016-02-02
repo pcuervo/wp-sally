@@ -17,11 +17,11 @@
 		</div>
 		<div class="[ col-xs-9 col-sm-6 ][ center-block ]" >
 			<p id="verfiltros" class="[ filter-button-group ]">
-				<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ]" data-filter="*" href="">Todos</a>
+				<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ]" data-filter="*" href="#" onClick="ga('send', 'event', 'Tutoriales', 'clic', 'Todos');">Todos</a>
 				<?php
 				$categorias_tutoriales = get_categorias_tutoriales();
 				foreach ( $categorias_tutoriales as $slug => $name ) : ?>
-					<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ]" data-filter=".<?php echo $slug; ?>" href=""><?php echo $name; ?></a>
+					<a class="[ margin-right--xsmall margin-bottom--xsmall ][ btn btn-tertiary width-auto ][ text-lowercase ]" data-filter=".<?php echo $slug; ?>" href="#" onClick="ga('send', 'event', 'Tutoriales', 'clic', '<?php echo $name ?>');"><?php echo $name; ?></a>
 				<?php endforeach; ?>
 			</p>
 		</div>
@@ -102,7 +102,7 @@ if ( $paginate_links ) : ?>
 					</div>
 				</div>
 				<div>
-					<a href="#" class="[ btn-tw ]">
+					<a href="#" class="[ btn-tw ]" target="_blank">
 						<img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 					</a>
 					<a href="#" class="[ btn-fb ]" data-share-url="" >
