@@ -18,6 +18,8 @@
 		<form id="forma-exito" data-parsley-validate>
 			<label for="nombre" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Nombre</label>
 			<input type="text" name="name" id="name_field" class="[ form-control input-ph-light ][ margin-bottom ]" required data-parsley-error-message="Por favor ingresa máximo 80 caracteres." data-parsley-maxlength="80" maxlength="80" placeholder="Diana Rodriguez">
+			<label for="nombre" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Correo Electrónico</label>
+			<input type="email" name="email" id="email_field" class="[ form-control input-ph-light ][ margin-bottom ]" required data-parsley-error-message="Por favor ingresa un correo valido." data-parsley-maxlength="80" maxlength="80" placeholder="diana_rodriguez@correo.com">
 			<label for="titulo-del-tutorial" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Título del tutorial</label>
 			<input type="text" name="title" id="title_field" class="[ form-control input-ph-light ][ margin-bottom ]"  required="" data-parsley-error-message="Por favor ingresa la información necesaria." data-parsley-error-message="Por favor ingresa máximo 120 caracteres." data-parsley-maxlength="120" maxlength="120" placeholder="El cat eye perfecto">
 			<label for="resumen-1" class="[ text-uppercase ][ fz-small ][ letter-spacing--small ] ">Escribe 3 frases que describen tu tutorial:</label>
@@ -47,7 +49,7 @@
 			</div>
 			<?php show_select_categorias_tutoriales(); ?>
 			<div class="[ col-xs-12 ][ margin-bottom--xlarge ][ text-center ]">
-				<input type="submit" value="Continuar" class="[ btn btn-primary ]">
+				<input type="submit" value="Continuar" class="[ btn btn-primary ]" onClick="ga('send', 'event', 'GrabacionExitosa', 'clic', 'FormularioContinuar');">
 			</div>
 		</form>
 	</div>

@@ -116,6 +116,29 @@ function save_tutorial(){
 add_action("wp_ajax_save_tutorial", "save_tutorial");
 add_action("wp_ajax_nopriv_save_tutorial", "save_tutorial");
 
+/**
+ * Guarda el numero de cliks incremental en un video en ver-tutoriales
+ *
+ * @return integer $count - Click count.
+ */
+function add_view_count(){
+
+	$post_id = $_POST['id'];
+	$click_count = get_post_meta($post_id, '_click_count_meta', true);
+
+	update_post_meta($post_id, '_click_count_meta', intval($click_count)+1 );
+
+	$message = array(
+		'error'		=> 0,
+		'message'	=> 'Se incrementó el click count',
+		'new_count' => (intval($click_count)+1)
+	);
+	echo json_encode($message , JSON_FORCE_OBJECT);
+	exit();
+}// add_view_count
+add_action("wp_ajax_add_view_count", "add_view_count");
+add_action("wp_ajax_nopriv_add_view_count", "add_view_count");
+
 
 
 /*------------------------------------*\

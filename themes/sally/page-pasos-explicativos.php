@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary ]">Empezar a grabar</a>
+	<a href="<?php echo site_url( 'grabando' ); ?>" class="[ btn btn-primary ]" onClick="ga('send', 'event', 'GrabaTutorial', 'clic', 'EmpezaraGrabar');">Empezar a grabar</a>
 	<div class="[ margin-bottom--xlarge ][ visible-xs ]"></div>
 </section>
 <div class="[ relative--xs ]">

@@ -48,19 +48,24 @@ function footer_scripts(){
 					$('.grid-item').click( function(){
 						var video_url = '<?php echo THEMEPATH ?>' + $(this).find('.js-url-video').text();
 						var video_title = $(this).find('.js-titulo').text();
+						var categoria = $(this).find('.js-categoria').text();
+						var id = $(this).find('.js-id').text();
 						createTutorialVideo( $('.js-video-container'), video_url, 'video/mp4' );
 						$('.js-modal-titulo').text( $(this).find('.js-titulo').text() );
 						$('.js-modal-nombre').text( $(this).find('.js-nombre').text() );
 						var shareUrl =  $(this).find('.js-url-share').text();
 						shareUrl = shareUrl.replace( 'http', 'https' );
 						$('.btn-fb').attr( 'data-share-url', shareUrl );
+						$('.btn-fb, .btn-tw').attr( 'data-ga-title', categoria + 'Vid' + id );
 						$('.btn-tw').attr( 'href', 'http://twitter.com/home?status=Sally Beauty - '+video_title+' - '+shareUrl );
 						playPause( $('#videoTutorial')[0] );
+						ga('send', 'pageview', categoria + 'Vid' + id);
+						addViewCount(id);
 					});
 
 					runIsotope('.js-grid', '.grid-item');
+
 					$('#tutoriales3').on('hide.bs.modal', function (e) {
-						console.log( 'pausing...' );
 						playPause( $('#videoTutorial')[0] );
 						$('.js-video-container video').remove();
 						$('.btn-fb').removeAttr( 'data-share-url');
@@ -69,8 +74,14 @@ function footer_scripts(){
 					$('.btn-fb').click( function(e){
 						e.preventDefault();
 						var shareUrl = $(this).attr('data-share-url');
-						console.log( shareUrl );
+						var gaId = $(this).attr('data-ga-title');
 						shareVideoFB( shareUrl );
+						ga('send', 'event', gaId, 'clic', 'shareFB');
+					});
+
+					$('.btn-tw').click( function(e){
+						var gaId = $(this).attr('data-ga-title');
+						ga('send', 'event', gaId, 'clic', 'shareTW');
 					});
 				<?php endif; ?>
 
@@ -83,6 +94,7 @@ function footer_scripts(){
 						var formData = {
 							'uuid' : uuid,
 							'name' : $("#name_field").val(),
+							'email' : $("#name_email").val(),
 							'title': $("#title_field").val(),
 							'frase1_field' : $("#frase1_field").val(),
 							'frase2_field' : $("#frase2_field").val(),
@@ -107,7 +119,8 @@ function footer_scripts(){
 							localStorage.setItem("video_url" , 'render/videos/' + data.video_url);
 							localStorage.setItem("img_url", 'render/img/' + data.img_url);
 							localStorage.setItem("title", $("#title_field").val());
-							localStorage.setItem("name", $("#name_field").val())
+							localStorage.setItem("email", $("#email_field").val());
+							localStorage.setItem("name", $("#name_field").val());
 							localStorage.setItem("category", $("#frase1_category").val());
 			 				window.location.href = site_url + '/vobo';
 						});

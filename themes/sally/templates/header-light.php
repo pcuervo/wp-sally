@@ -1,5 +1,5 @@
 <header class="[ container ]">
-	<a href="<?php echo site_url(); ?>">
+	<a href="<?php echo site_url(); ?>" onClick="ga('send', 'event', 'MenuSup', 'clic', 'Home');">
 		<img class="[ logo ]" src="<?php echo THEMEPATH; ?>img/logo.png">
 	</a>
 	<span class="[ visible-xs ][ pull-right ]">
@@ -8,10 +8,10 @@
 		</a>
 	</span>
 	<span class="[ hidden-xs ][ pull-right ]">
-		<a  href="https://www.youtube.com/user/SallyBeautyMexico"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/youtube.svg"></a>
-		<a href="https://www.instagram.com/sallybeautymx/"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/instagram.svg"></a>
-		<a href="https://twitter.com/SallyMexico"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg"></a>
-		<a href="https://www.facebook.com/SallyMexico"  target="_blank"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg"></a>
+		<a  href="https://www.youtube.com/user/SallyBeautyMexico"  target="_blank" onClick="ga('send', 'event', 'MenuSup', 'clic', 'YT');"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/youtube.svg" ></a>
+		<a href="https://www.instagram.com/sallybeautymx/"  target="_blank" onClick="ga('send', 'event', 'MenuSup', 'clic', 'Instagram');"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/instagram.svg"></a>
+		<a href="https://twitter.com/SallyMexico"  target="_blank" onClick="ga('send', 'event', 'MenuSup', 'clic', 'TW');"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed--medium icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg"></a>
+		<a href="https://www.facebook.com/SallyMexico"  target="_blank" onClick="ga('send', 'event', 'MenuSup', 'clic', 'FB');"><img class="[ inline-block align-middle ][ margin-sides--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/facebook.svg"></a>
 		<!-- <a href="http://www.sallymexico.com/" class="[ no-decoration ]" target="_blank">
 			<img class="[ inline-block align-middle ][ margin-left--small ][ svg icon--iconed icon--thickness-3 icon--fill ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/shopping-bag-1.svg">
 			<p class="[ inline-block align-middle ][ no-margin ][ color-light ]">Compra en linea</p>
