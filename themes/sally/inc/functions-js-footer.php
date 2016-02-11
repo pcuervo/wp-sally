@@ -92,7 +92,7 @@ function footer_scripts(){
 						var formData = {
 							'uuid' : uuid,
 							'name' : $("#name_field").val(),
-							'email' : $("#name_email").val(),
+							'email' : $("#email_field").val(),
 							'title': $("#title_field").val(),
 							'frase1_field' : $("#frase1_field").val(),
 							'frase2_field' : $("#frase2_field").val(),
