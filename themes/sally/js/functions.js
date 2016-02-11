@@ -84,6 +84,19 @@ function publishVideoWP( name, title, category, video_url, img_url ){
     );
 }// publishVideoWP
 
+function addViewCount(id){
+    $.post(
+        ajax_url,
+        {
+            id:       id,
+            action:     'add_view_count'
+        },
+        function( response ){
+            console.log(response);
+        }
+    );
+}// addViewCount
+
 //Compartir redes
 function loadRedes(){
     $('.js-publicar-container').load( "ajax/comparte.html .js-publicar-element", function(){

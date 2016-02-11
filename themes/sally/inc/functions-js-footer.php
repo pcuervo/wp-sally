@@ -60,9 +60,11 @@ function footer_scripts(){
 						$('.btn-tw').attr( 'href', 'http://twitter.com/home?status=Sally Beauty - '+video_title+' - '+shareUrl );
 						playPause( $('#videoTutorial')[0] );
 						ga('send', 'pageview', categoria + 'Vid' + id);
+						addViewCount(id);
 					});
 
 					runIsotope('.js-grid', '.grid-item');
+
 					$('#tutoriales3').on('hide.bs.modal', function (e) {
 						playPause( $('#videoTutorial')[0] );
 						$('.js-video-container video').remove();
@@ -77,7 +79,7 @@ function footer_scripts(){
 						ga('send', 'event', gaId, 'clic', 'shareFB');
 					});
 
-					$('.btn-tw').click( function(e){ 
+					$('.btn-tw').click( function(e){
 						var gaId = $(this).attr('data-ga-title');
 						ga('send', 'event', gaId, 'clic', 'shareTW');
 					});
