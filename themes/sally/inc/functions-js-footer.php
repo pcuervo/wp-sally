@@ -92,6 +92,7 @@ function footer_scripts(){
 						var formData = {
 							'uuid' : uuid,
 							'name' : $("#name_field").val(),
+							'email' : $("#name_email").val(),
 							'title': $("#title_field").val(),
 							'frase1_field' : $("#frase1_field").val(),
 							'frase2_field' : $("#frase2_field").val(),
@@ -116,7 +117,8 @@ function footer_scripts(){
 							localStorage.setItem("video_url" , 'render/videos/' + data.video_url);
 							localStorage.setItem("img_url", 'render/img/' + data.img_url);
 							localStorage.setItem("title", $("#title_field").val());
-							localStorage.setItem("name", $("#name_field").val())
+							localStorage.setItem("email", $("#email_field").val());
+							localStorage.setItem("name", $("#name_field").val());
 							localStorage.setItem("category", $("#frase1_category").val());
 			 				window.location.href = site_url + '/vobo';
 						});
