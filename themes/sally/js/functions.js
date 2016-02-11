@@ -58,13 +58,14 @@ function emptyVideo(){
     $('.js-video-container').empty();
 }
 
-function publishVideoWP( name, title, category, video_url, img_url ){
+function publishVideoWP( name, title, category, email, video_url, img_url ){
     $.post(
         ajax_url,
         {
             name:       name,
             title:      title,
             category:   category,
+            email:      email,
             video_url:  video_url,
             img_url:    img_url,
             action:     'save_tutorial'

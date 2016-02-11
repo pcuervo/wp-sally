@@ -78,6 +78,7 @@ function save_tutorial(){
 	$nombre = $_POST['name'];
 	$titulo =  $_POST['title'];
 	$categoria_tutorial =  $_POST['category'];
+	$email =  $_POST['email'];
 	$url_video =  $_POST['video_url'];
 	$url_imagen = $_POST['img_url'];
 
@@ -99,6 +100,7 @@ function save_tutorial(){
 	}
 
 	add_post_meta( $post_id, '_nombre_meta', $nombre );
+	add_post_meta( $post_id, '_email_meta', $email );
 	add_post_meta( $post_id, '_url_video_meta', $url_video );
 	add_post_meta( $post_id, '_url_imagen_meta', $url_imagen );
 	$categoria_tutorial_term = get_term_by( 'name', $categoria_tutorial, 'categoria-tutorial' );
