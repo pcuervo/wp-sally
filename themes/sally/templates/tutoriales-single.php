@@ -33,6 +33,7 @@
 						<div class="[ grid-item__info__bg ]">
 							<p class="[ text-uppercase color-black ][ no-margin ][ fz-small ][ js-nombre ]"><strong> <?php echo $nombre; ?></strong></p>
 							<p class="[ color-light ][ no-margin ][ fz-small ][ js-titulo ]"><?php echo get_the_title(); ?></p>
+							<p class="[ color-light fz-small ]">Visto 00000 veces</p>
 							<span class="[ hidden ][ js-url-video ]"><?php echo $video_url; ?></span>
 							<span class="[ hidden ][ js-url-share ]"><?php echo $share_url; ?></span>
 							<span class="[ hidden ][ js-url-share ]"><?php echo $share_url; ?></span>
