@@ -25,52 +25,11 @@
 				<?php endforeach; ?>
 			</p>
 		</div>
-		<div class="[ hidden-xs hidden-sm ][ col-sm-5 ][ text-right ][ hidden ]">
-			<ul class="[ pagination large ][ color-primary ]">
-				<li>
-					<a href="#" aria-label="Previous">
-						<img aria-hidden="true" class="[ ico-small ][ svg icon--stroke icon--iconed--medium icon--thickness-1 ][ color-primary ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-					</a>
-				</li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li>
-					<a href="#" aria-label="Next">
-						<img aria-hidden="true" class="[ ico-small ][ svg icon--stroke icon--iconed--medium icon--thickness-1 ][ color-primary ]" src="<?php echo THEMEPATH; ?>icons/next.svg">
-					</a>
-				</li>
-			</ul>
-		</div>
 	</div><!--/row: filtros / paginacion-->
 </div> <!--/container-->
 <section class="[ text-center ][ js-grid ][ margin-bottom ]">
 	<?php get_template_part('templates/tutoriales', 'single'); ?>
 </section>
-
-<?php
-global $query_tutoriales;
-$big = 999999999; // need an unlikely integer
-$paginate_links = paginate_links( array(
-	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-	'format' => '?paged=%#%',
-	'current' => max( 1, get_query_var('paged') ),
-	'total' => $query_tutoriales->max_num_pages,
-	'prev_text'    => __("<img class='[ svg icon--stroke icon--iconed--medium icon--thickness-1 ][ color-primary ]' src='".THEMEPATH."icons/back.svg'>"),
-    'next_text'    => __("<img class='[ svg icon--stroke icon--iconed--medium icon--thickness-1 ][ color-primary ]' src='".THEMEPATH."icons/next.svg'>"),
-) );
-
-if ( $paginate_links ) : ?>
-
-	<div class="[ col-sm-12 ][ text-center ][ margin-bottom ]">
-		<div class="[ pagination large ][ color-primary ]">
-			<?php echo $paginate_links; ?>
-		</div>
-	</div>
-
-<?php endif; ?>
 
 <!-- modal-tutorial -->
 <div id="tutoriales3" class="[ modal fade ]" tabindex="-1" role="dialog">

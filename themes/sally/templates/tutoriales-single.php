@@ -3,7 +3,7 @@
 	$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 	$tutoriales_args = array(
 		'post_type' 		=> 'tutoriales',
-		'posts_per_page'	=> 9,
+		'posts_per_page'	=> -1,
 		'orderby'			=> 'date',
 		'order'				=> 'DESC',
 		'paged'				=> $paged,
@@ -17,7 +17,7 @@
 		$categoria_tutorial = get_categoria_tutorial( $post->ID, 1 );
 		$share_url = get_permalink();
 	?>
-		<div class="[ col-xs-6 col-sm-3 col-md-4 ][ no-padding ][ grid-item ][ <?php echo $slug_categoria_tutorial; ?> ]" data-toggle="modal" data-target="#tutoriales3">
+		<div class="[ col-xs-6 col-sm-3 ][ no-padding ][ grid-item ][ <?php echo $slug_categoria_tutorial; ?> ]" data-toggle="modal" data-target="#tutoriales3">
 			<div class="[ padding--square ][ bg-image ][ relative ][ grid-item__image ]" style="background-image: url('<?php echo $image_url ?>');">
 				<div class="[ bg-opacity-dark ][ grid-item__info_compressed ]">
 					<div class="[ center-full ]">
