@@ -13,6 +13,7 @@
 		$image_url = THEMEPATH . get_post_meta( $post->ID, '_url_imagen_meta', true );
 		$video_url = get_post_meta( $post->ID, '_url_video_meta', true );
 		$nombre = get_post_meta( $post->ID, '_nombre_meta', true );
+		$click_count = empty( get_post_meta( $post->ID, '_click_count_meta', true ) ) ? 0 : get_post_meta( $post->ID, '_click_count_meta', true );
 		$slug_categoria_tutorial = get_categoria_tutorial( $post->ID, 0 );
 		$categoria_tutorial = get_categoria_tutorial( $post->ID, 1 );
 		$share_url = get_permalink();
@@ -33,7 +34,8 @@
 						<div class="[ grid-item__info__bg ]">
 							<p class="[ text-uppercase color-black ][ no-margin ][ fz-small ][ js-nombre ]"><strong> <?php echo $nombre; ?></strong></p>
 							<p class="[ color-light ][ no-margin ][ fz-small ][ js-titulo ]"><?php echo get_the_title(); ?></p>
-							<p class="[ color-light fz-small ]">Visto 00000 veces</p>
+							<p class="[ color-light fz-small ]">
+								Visto <?php echo $click_count; ?><?php echo $click_count == '1' ? ' vez' : ' veces' ?></p>
 							<span class="[ hidden ][ js-url-video ]"><?php echo $video_url; ?></span>
 							<span class="[ hidden ][ js-url-share ]"><?php echo $share_url; ?></span>
 							<span class="[ hidden ][ js-url-share ]"><?php echo $share_url; ?></span>
